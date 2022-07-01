@@ -1,0 +1,467 @@
+\documentclass[11pt,a4paper,oneside]{article}
+%\usepackage{listings}
+%\usepackage{ucs}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{txfonts}
+\usepackage{lmodern}
+\usepackage[pdftex]{thumbpdf}
+\usepackage[citecolor={purple},linkcolor={blue},urlcolor={blue},
+   a4paper,colorlinks,breaklinks]{hyperref}
+\usepackage{txfonts}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+\usepackage{../../../../resources/svglatex}
+
+\graphicspath{{../figures/}}
+
+\renewcommand\familydefault{\sfdefault}
+
+\usepackage{vmargin}
+\setmarginsrb{3.3cm}{2cm}{1cm}{1cm}{1cm}{1cm}{0.5cm}{0.5cm}
+
+%% \usepackage{fullpage}
+\usepackage{color}
+\usepackage{url}
+\usepackage[french]{babel}
+\usepackage{listings}
+\usepackage{listingsutf8}
+
+%\usepackage{minted}
+
+\author{Jérôme Buisine\\\url{jerome.buisine@univ-littoral.fr}}
+\title{\textbf{\textbf{TP6 Agilité}}\\
+\emph{Toward an end-to-end testing process during project development}}
+\newcommand{\orangeline}{\rule{\linewidth}{1mm}}
+
+\lstset{language=C++,extendedchars=true,inputencoding=latin1,
+    basicstyle=\ttfamily\small, commentstyle=\ttfamily\color{green},
+      showstringspaces=false,basicstyle=\ttfamily\small}
+
+\lstdefinestyle{custombash}{
+	inputencoding=utf8,
+	mathescape,
+	basicstyle=\footnotesize\ttfamily,
+	language=bash,
+	breaklines=true,
+	frame             = lines,
+%	framexleftmargin = 8mm,
+	framerule         = 1pt,
+	rulecolor         = \color{gray!50!black},
+	xleftmargin=\parindent,
+	extendedchars=true, 
+	breaklines=true,
+	breakatwhitespace=true,
+	backgroundcolor = \color{gray!6},
+	literate=
+	{é}{{\'e}}{1}%
+	{è}{{\`e}}{1}%
+	{à}{{\`a}}{1}%
+	{â}{{\^a}}{1}%%%
+	{ç}{{\c{c}}}{1}%
+	{œ}{{\oe}}{1}%
+	{ù}{{\`u}}{1}%
+	{É}{{\'E}}{1}%
+	{È}{{\`E}}{1}%
+	{À}{{\`A}}{1}%
+	{Ç}{{\c{C}}}{1}%
+	{Œ}{{\OE}}{1}%
+	{Ê}{{\^E}}{1}%
+	{ê}{{\^e}}{1}%
+	{î}{{\^i}}{1}%
+	{ï}{{\"i}}{1}%%%
+	{ô}{{\^o}}{1}%
+	{û}{{\^u}}{1}%
+	%{=}{$\leftarrow$}{1}%
+	%{==}{$={}$}{1}
+}
+
+
+\lstdefinestyle{customc}{
+	inputencoding=utf8,
+	belowcaptionskip=1\baselineskip,
+	breaklines=true,
+	frame=L,
+	xleftmargin=\parindent,
+	language=C,
+	showstringspaces=false,
+	basicstyle=\footnotesize\ttfamily,
+	keywordstyle=\bfseries\color{green!40!black},
+	commentstyle=\itshape\color{purple!40!black},
+	identifierstyle=\color{blue},
+	stringstyle=\color{orange},
+}
+
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pgreen}{rgb}{0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+
+\lstdefinestyle{customJava} {
+	inputencoding=utf8,
+	language=Java,
+	breaklines=true,
+	frame             = lines,
+	%	framexleftmargin = 8mm,
+	framerule         = 1pt,
+	rulecolor         = \color{gray!50!black},
+	xleftmargin=\parindent,
+	extendedchars=true, 
+	breaklines=true,
+	breakatwhitespace=true,
+	showspaces=false,
+	showtabs=false,
+	breaklines=true,
+	showstringspaces=false,
+	breakatwhitespace=true,
+	commentstyle=\color{pgreen},
+	keywordstyle=\color{pblue},
+	stringstyle=\color{pred},
+	basicstyle=\footnotesize\ttfamily,
+	moredelim=[il][\textcolor{pgrey}]{$$},
+	moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%},
+	backgroundcolor = \color{black!6},
+	literate=
+	{é}{{\'e}}{1}%
+	{è}{{\`e}}{1}%
+	{à}{{\`a}}{1}%
+	{â}{{\^a}}{1}%%%
+	{ç}{{\c{c}}}{1}%
+	{œ}{{\oe}}{1}%
+	{ù}{{\`u}}{1}%
+	{É}{{\'E}}{1}%
+	{È}{{\`E}}{1}%
+	{À}{{\`A}}{1}%
+	{Ç}{{\c{C}}}{1}%
+	{Œ}{{\OE}}{1}%
+	{Ê}{{\^E}}{1}%
+	{ê}{{\^e}}{1}%
+	{î}{{\^i}}{1}%
+	{ï}{{\"i}}{1}%%%
+	{ô}{{\^o}}{1}%
+	{û}{{\^u}}{1}%
+	%{=}{$\leftarrow$}{1}%
+	%{==}{$={}$}{1}
+}
+
+\definecolor{forestgreen}{RGB}{34,139,34}
+\lstdefinestyle{customXML} {
+	inputencoding=utf8,
+	language=XML,
+	breaklines=true,
+	frame             = lines,
+	%	framexleftmargin = 8mm,
+	framerule         = 1pt,
+	rulecolor         = \color{green!50!black},
+	xleftmargin=\parindent,
+	extendedchars=true, 
+	breaklines=true,
+	breakatwhitespace=true,
+	emph={},
+	emphstyle=\color{red},
+	basicstyle=\footnotesize\ttfamily,
+	columns=fullflexible,
+	commentstyle=\color{gray}\upshape,
+	morestring=[b]",
+	morecomment=[s]{<?}{?>},
+	morecomment=[s][\color{forestgreen}]{<!--}{-->},
+	keywordstyle=\color{forestgreen},
+	stringstyle=\ttfamily\color{black}\normalfont,
+	tagstyle=\color{forestgreen}\bf,
+	morekeywords={attribute,xmlns,version,type,release},
+	otherkeywords={attribute=, xmlns=},
+	backgroundcolor = \color{green!6},
+}
+
+\definecolor{orange}{RGB}{255,140,0}
+\lstdefinestyle{customYML} {
+	inputencoding=utf8,
+	language=XML,
+	breaklines=true,
+	frame             = lines,
+	%	framexleftmargin = 8mm,
+	framerule         = 1pt,
+	rulecolor         = \color{gray!50!black},
+	xleftmargin=\parindent,
+	extendedchars=true, 
+	breaklines=true,
+	breakatwhitespace=true,
+	emph={},
+	emphstyle=\color{red},
+	basicstyle=\footnotesize\ttfamily,
+	columns=fullflexible,
+	commentstyle=\color{gray}\upshape,
+	morestring=[b]",
+	morecomment=[s]{<?}{?>},
+	morecomment=[s][\color{orange}]{<!--}{-->},
+	keywordstyle=\color{orange},
+	stringstyle=\ttfamily\color{black}\normalfont,
+	tagstyle=\color{orange}\bf,
+	morekeywords={attribute,xmlns,version,type,release},
+	otherkeywords={attribute=, xmlns=},
+	backgroundcolor = \color{gray!6},
+}
+
+
+\newcommand{\background}{
+\setlength{\unitlength}{1in}
+\begin{picture}(0,0)
+	\put(-1.6,-7.45){
+		\def\svgwidth{\columnwidth}
+		\includegraphics[height=25.7cm]{resources/background-tp6-2021.pdf}
+	}
+\end{picture}}
+
+\begin{document}
+\maketitle
+\background
+
+\begin{flushright}
+  Durée : 6 heures
+\end{flushright}
+
+\noindent\orangeline
+
+L'objectif de ce TP est de vérifier le bon fonctionnement d'une application web. Cette interface graphique doit permettre à la fois de régler des paramètres de simulation de notre réseau routier mais également d'afficher les résultats obtenus de la simulation de ce réseau. Nous allons vérifier, étape par étape, que l'interface graphique fonctionne comme attendue en utilisant le framework \href{https://www.cypress.io/}{Cypress}.
+
+\section{Travail}
+
+Vous allez partir d'un projet initial, dans lequel se trouve un \textbf{jar} exécutable comprenant l'API REST d'intéraction avec le réseau routier et l'interface web proposée. Nous allons tester l'ensemble des fonctionnalités de cette interface au fur et à mesure de l'avancement du TP.\\
+
+
+Voici l'ensemble des outils / langages qui seront utilisés pour ce TP :
+\begin{itemize}
+\item 1. IntelliJ/Idea (version Ultimate) comme environnement de développement;
+\item 2. \href{https://fr.wikipedia.org/wiki/Git}{git} comme  système de versionning du projet;
+\item 3. \href{https://gitlab.com/}{Gitlab} comme serveur d'hébergement de votre projet git (permettant l'accès à  des outils d'intégration, livraison, deploiement continues);
+\item 4. Java pour exécuter le serveur d'API REST ;
+\item 5. \href{https://nodejs.org/en/}{Node.js} pour lancer l'application web et ses dépendances. Il sera donc nécessaire de l'\textbf{installer} (version LTS de préférence) si ce n'est pas déjà le cas ;
+\item 5. Le framework \href{https://www.cypress.io/}{Cypress} permettant de simuler des interactions avec un site web directement et vérifiant le bon fonctionnement ;
+\end{itemize}
+
+\section{Initialisation du projet}
+
+Un projet git comprenant l'ensemble des éléments (le simulateur et son interface web) pour le sujet, est disponible à l'adresse suivante : \href{https://gitlab.com/jbuisine/2021-2022-m1-agility-tp6}{TP6-Agility}. Vous pouvez forker et ajouter ce projet comme dépendance (sous-module) de votre projet actuel :
+\begin{lstlisting}[style=custombash]
+git submodule add https://gitlab.com/XXXX/XXXX web
+\end{lstlisting}
+
+\subsection{Installation du projet}
+ 
+En suivant la procédure du fichier \textbf{README.md} du projet sous-module, procéder à l'installation de l'application (sans lancer Cypress pour le moment) puis visualiser l'interface web.
+ 
+\vspace{5mm}
+ 
+\subsection{L'interface web}
+
+L'interface web est composée de plusieurs onglets :
+
+\begin{itemize}
+	\item \textbf{Simulation} : permettant de lancer une simulation et d'avoir des informations temps réelles de celle-ci.
+	\item \textbf{Configuration} : qui permet de modifier les paramètres du réseaux routiers et ajouter des véhicules.
+	\item \textbf{Overview} : qui offre un visuel des éléments du réseau routier, et notamment la localisation des différents segments. 
+\end{itemize}
+
+\vspace{5mm}
+Les fonctionnalités et spécificités de cette interface web sont les suivantes :
+
+\begin{itemize}
+	\item Les données modifiées relatives aux segments, feux et rond-points, ne sont pas réinitialisées tant que le serveur d'API Java n'est pas redémarré.
+	\item Un véhicule est ajouté par un segment d'entrée et de sortie du réseau. Comme par exemple le segment 5 et le segment 26 (voir schéma onglet \textbf{Overview}, S5 et S26).
+	\item Une fois une simulation lancée, il est nécessaire de recharger la page pour en lancer une nouvelle.
+	\item Le fait de rafraîchir la page entraîne la suppression des véhicules existants (nouveau contexte de simulation). Comme indiqué précédemment, les données relatives à la structure du réseau, quant à elles, ne changent pas.
+\end{itemize}
+
+\textbf{Note :} il est important de souligner qu'une fois le serveur de l'API REST lancé, il est accessible à l'adresse suivante \href{http://127.0.0.1:4567}{http://127.0.0.1:4567}. La route `\texttt{/elements}` de l'API vous permettra de récupérer la structure du réseau routier courant et ses paramètres. Vous pouvez tester de contacter cette route depuis votre navigateur pour accéder au contenu une fois le système initialisé depuis l'application web.
+
+\section{Utilisation de Cypress}
+
+\subsection{Introduction}
+
+Cypress est un framework permettant de vérifier que la structure d'une page web (le DOM pour Document Object Model), est bien comme attendue après un scénario d'actions réalisées. On cherche ici à simuler les intéractions utilisateurs sur une plateforme web. Il est également possible d'exécuter des requêtes classiques via les méthodes du protocole HTTP.
+
+\vspace{5mm}
+
+Le dossier `\texttt{web-app/cypress}` du projet sous-module est propre à l'utilisation de Cypress. On y trouve notamment le fichier `\texttt{web-app/cypress/integration/sample\_spec.js}` dans lequel l'ensemble des tests Cypress seront codés. On trouve également dans ce dossier des vidéos des tests exécutés par Cypress ou encore, des screenshots d'erreurs rencontrées.
+
+\vspace{5mm}
+
+Il est possible d'exécuter Cypress depuis le dossier `\texttt{web-app}`:
+\begin{lstlisting}[style=custombash]
+./node_modules/.bin/cypress run
+\end{lstlisting}
+
+\vspace{2mm}
+
+Ou d'ouvrir une interface permettant le visuel des différents tests effectués par Cypress :
+\begin{lstlisting}[style=custombash]
+./node_modules/.bin/cypress open
+\end{lstlisting}
+
+\vspace{5mm}
+
+Les tests Cypress sont déjà intégrés au projet Gitlab. Vous pouvez visualiser le fichier de configuration `\texttt{.gitlab-ci.yml}` du sous-module pour comprendre son fonctionnement. De cette manière, vous pouvez éditer votre fichier de configuration CI/CD pour y intégrer les tests Cypress. Il faut bien faire attention ici à la cohérence des accès de chaque élément (certains stages déjà développés dans les TPs précédents ne seront plus forcément nécessaires). 
+
+\vspace{2mm}
+\textbf{Note importante :} Pour chaque test, vous allez pouvoir vérifier le fonctionement de celui-ci à partir de la CI/CD du projet web. Lorsque vos tests seront terminés, il vous faudra mettre à jour le sous-module dans le projet principal et y ajouter des modifications pour actionner la CI/CD pour prise en compte des tests Cypress.
+
+\vspace{2mm}
+Pour cela, il vous faudra ajouter au début du stage \texttt{cypress} dans le projet principal, l'instruction ci-dessous permettra d'initialiser votre sous-module côté CI/CD.
+\begin{lstlisting}[style=custombash]
+ git submodule update --init --recursive
+\end{lstlisting}
+
+\subsection{Exemples}
+
+Vous trouverez ci-dessous, quelques exemples pratiques de commandes que Cypress peut permettre lors de l'exécution de tests :
+\begin{lstlisting}[style=customJava]
+ // 1. Effectue une action de clic sur un élément sélectionné dans le DOM
+ cy.get('a[href="#configuration"]').click()
+		
+ // 2. Récupération puis saisie d'une valeur dans un champs de formulaire
+ cy.get('input[name="speed"][form="segment-5"]').clear().type('30')
+
+ // 3. Effectue une requête sur un élément extérieur au site (ici API) puis vérification du résultat
+ cy.request('GET', 'http://127.0.0.1:4567/elements').as('elements')
+
+ // utilisation de l'alias `elements`
+ cy.get('@elements').should((response) => {
+ 	expect(response.body['segments'][4]).to.have.property('speed', 10)
+ })
+
+ // 4. Récupère un formulaire puis réalise des actions sur des éléments enfants
+ cy.get('form[id="form-1"]').within(() => {
+	cy.get('input[type="text"]').type('test')
+	cy.get('button').click()
+ })
+\end{lstlisting}
+
+Chaque test devra être composé de sa description et de ses actions :
+
+\begin{lstlisting}[style=customJava]
+// Test 1 d'exemple par défaut :
+describe('The Traffic web site home page', () => {
+    it('successfully loads', () => {
+        cy.visit('/')
+    })
+})
+\end{lstlisting}
+
+\subsection{Première partie : développment de tests}
+
+En vous basant sur la documentation et les précisions apportées, implémenter les tests énumérés ci-dessous dans le fichier `\texttt{web-app/cypress/integration/sample\_spec.js}` à la suite du premier test. Après avoir vérifié que votre test fonctionne sur votre propre machine, et ce pour chacun des tests, réaliser un commit et mettre à jour le projet Gitlab. Vérifier que la pipeline et le job `cypress` fonctionne correctement.
+
+\subsubsection{Scénario 1}
+
+En cliquant sur l'onglet `\texttt{Configuration}` du menu, vérifier que l'on arrive bien sur la page de configuration.
+
+\subsubsection{Scénario 2}
+
+Vérifier sur la page configuration que notre réseau routier courant comprend bien 28 segments.
+
+\subsubsection{Scénario 3}
+
+Vérifier que le nombre de véhicules est pour le moment de 0.
+
+\subsubsection{Scénario 4}
+
+Modifier la valeur de vitesse du segment 5 à 30 puis vérifier que la mise à jour a bien été réalisée sur le serveur de l'API en exploitant la route `\texttt{elements}`.
+
+\vspace{5mm}
+Vérifier également qu'une fenêtre s'affiche pour informer l'utilisateur après modification et qu'elle se ferme correctement après avoir cliqué sur le bouton `\texttt{Close}`.
+
+\vspace{5mm}
+\textbf{Note :} la route `\texttt{elements}` vous fournit des informations sur les paramètres du réseau routier. Vous pouvez visualiser sont contenu afin de vous en familiariser.
+
+\subsubsection{Scénario 5}
+
+Modifier le rond point pour qu'il puisse avoir une capacité de 4 et une durée de 15 secondes. Rafraîchir la page pour vérifier que les modifications sont bien répercutées côté client. Vérifier également la persistance de ces données depuis la route `\texttt{elements}`.
+
+\subsubsection{Scénario 6}
+
+Modifier le feu d'identifiant 29 avec les valeurs suivantes :
+\begin{itemize}
+	\item Orange duration : 4
+	\item Green duration : 40
+	\item Next passage duration : 8
+\end{itemize}
+
+\vspace{2mm}
+Vérifier également la persistance de ces données depuis la route `\texttt{elements}`.
+
+\subsubsection{Scénario 7}
+
+Ajouter 3 véhicules avec les chemins d'origine / destination, et temps de départ suivants :
+
+% problèmes:
+% S19 => S16
+% S21 => S6
+\begin{itemize}
+	\item Origine : S5 / Destination : S26 / Départ : 50
+	\item Origine : S19 / Destination : S8 / Départ : 200
+	\item Origine : S27 / Destination : S2 / Départ : 150
+\end{itemize}
+
+\vspace{2mm}
+Vérifier la cohérence des données véhicules côté serveur depuis la route `\texttt{vehicles}`.
+
+\vspace{2mm}
+Vérifier que l'affichage des véhicules sont bien présents depuis l'interface de configuration et au nombre de 3.
+
+\subsubsection{Scénario 8}
+
+\vspace{2mm}
+Vérifier sur l'interface de simulation que tous les véhicules sont bien à l'arrêts.
+
+\vspace{2mm}
+Réaliser ensuite une simulation de 120 secondes. Vérifier que la barre de progression est bien à 100\% en fin de simulation.
+
+\vspace{2mm}
+Vérifier également que seul le premier véhicule est en mouvement en fin de simulation.
+
+\subsubsection{Scénario 9}
+
+Rafraîchir la page pour commencer une nouvelle simulation ou appeler la route du serveur API `\texttt{http://localhost:4567/init}` pour réinitialiser la simulation. Vérifier que la simulation a été réinitialisée et que les 3 véhicules ne sont plus présents.
+
+\vspace{2mm}
+Ajouter les 3 mêmes véhicules que pour le \textbf{scénario 7}.
+
+\vspace{2mm}
+Réaliser ensuite une simulation de 500 secondes.
+
+\vspace{2mm}
+Vérifier que chaque véhicule n'est plus en mouvement en fin de simulation
+
+\subsubsection{Scénario 10}
+
+Rafraîchir la page pour commencer une nouvelle simulation. Vérifier que la simulation a été réinitialisée et que les 3 véhicules ne sont plus présents.
+
+\vspace{2mm}
+Ajouter les 3 véhicules suivants :
+\begin{itemize}
+	\item Origine : S5 / Destination : S26 / Départ : 50
+	\item Origine : S5 / Destination : S26 / Départ : 80
+	\item Origine : S5 / Destination : S26 / Départ : 80
+\end{itemize}
+
+\vspace{2mm}
+Réaliser ensuite une simulation de 200 secondes.
+
+\vspace{2mm}
+Vérifier la position de chacun des véhicules en fin de simulation :
+\begin{itemize}
+	\item Véhicule 1 : doit être sur le segment 17
+	\item Véhicule 2 : doit être sur le segment 29
+	\item Véhicule 3 : doit être sur le segment 29
+\end{itemize}
+
+\subsubsection{Seconde partie : simplification des tests}
+
+En vous basant sur l'application React développée (`\texttt{web-app/src/index.js}`). Ajouter des idenfiants sur certains blocs pour faciliter la ré-écriture de vos différents scénarios.
+
+\vspace{2mm}
+Pour cela, vous allez créer un nouveau fichier de test à cet effet. L'idée est ici de montrer qu'il est important en amont de posséder une architecture DOM correcte et détaillée pour l'écriture de ce genre de tests. À noter qu'il faut que les tests précédents soient toujours fonctionnels.
+
+\end{document}

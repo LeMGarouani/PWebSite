@@ -1,0 +1,216 @@
+{{ define "main" }}
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+
+
+<section class="section container-fluid">
+  
+  
+    <!--<h2 class="mt-0">{{ .Title }}</h2>-->
+
+    <div class="row" itemprop="author" itemscope="" style="margin-top: -20px;"  itemtype="http://schema.org/Person" itemref="person-email person-telephone person-address">
+      <div class="col-25 col-lg-4">
+        <div id="profile">      
+          <img class="portrait" src="/images/homepage/avatar.png" itemprop="image" alt="Avatar">
+          
+          <div class="portrait-title">
+            <h2 itemprop="name">Moncef Garouani</h2>
+            <h3 itemprop="jobTitle">Data Scientist | AutoML researcher | Temporary Lecturer and Research Assistant @</h3>
+      
+            <h3 itemprop="worksFor" itemscope="" itemtype="http://schema.org/Organization">
+              <a href="https://www.univ-littoral.fr/" target="_blank" itemprop="url" rel="noopener">
+              <span itemprop="name">Université du Littoral Côte d'Opale</span>
+              </a>
+              <a href="https://www-lisic.univ-littoral.fr" target="_blank" itemprop="url" rel="noopener">
+                <span itemprop="name">LISIC Laboratory</span>
+                </a>
+          </div>
+    
+          <link itemprop="url" href="">
+
+          <ul class="network-icon" aria-hidden="true">
+            
+            <li>
+              <a itemprop="sameAs" href="/contact">
+                  <i class="fa fa-envelope"></i>
+                </a>
+              </li>
+              
+               
+              <li>
+                <a itemprop="sameAs" href="https://github.com/LeMgarouani" target="_blank" rel="noopener">
+                  <i class="fa fa-github"></i>
+                </a>
+              </li>
+               
+
+              <li>
+                <a itemprop="sameAs" href="https://scholar.google.com/citations?user=4nXi7GAAAAAJ&hl=fr" target="_blank" rel="noopener">
+                  <i class="ai ai-google-scholar"></i>
+                </a>
+              </li>
+              
+              <li>
+                <a itemprop="sameAs" href="https://www.researchgate.net/profile/Moncef-Garouani?ev=hdr_xprf&_sg=Y9Q7reExPd4eXT4siaveaCu9doRVWyeQZu7qM5t2SzJPwjC7mJkAzxLqEGzeO84yp5TmfOlE2eqy_7t7vTWdRQ4j" target="_blank" rel="noopener">
+                  <i class="fab fa-researchgate"></i>
+                </a>
+              </li>
+
+               <li>
+                <a itemprop="sameAs" href="https://www.linkedin.com/in/moncef-garouani/" target="_blank" rel="noopener">
+                  <i class="fa fa-linkedin"></i>
+                </a>
+              </li>
+              
+              <!--
+              <li>
+                <a itemprop="sameAs" href="https://hamnexik.medium.com/" target="_blank" rel="noopener">
+                  <i class="fa fa-medium big-icon"></i>
+                </a>
+              </li>
+              -->
+              
+              <!--
+              <li>
+                <a itemprop="sameAs" href="/sources/jbuisine/cv.pdf">
+                  <i class="ai ai-cv big-icon"></i>
+                </a>
+              </li>
+              -->
+            </ul>
+          </div>
+        </div>
+        <div class="col-25 col-lg-12" itemprop="description">
+      
+          
+          <h3>Biography</h3>
+      
+          <p class="description">I am currently a Temporary Lecturer and Research Assistant in the LISIC at the Engineering School of Littoral Côte d'Opale. My research work is mainly focused on the automatic selection and parametrization of machine learning algorithms and the Explanability of AI. The major goal is to achieve an optimal performance for a given task while providing the rationale traceability behind a ML recommendation or decision. I am also working on underlying topics such as Meta-learning, Natural language processing, and Computer vision.
+      
+      
+          <div class="row">
+      <!--
+            <div class="col-md-5">
+              <h4>Interests</h4>
+              <ul class="ul-interests">
+                <li>Machine & Deep learning</li>
+                <li>Automated machine learning</li>
+                <li>Explainability of AI</li>
+                <li>Natural language processing</li>
+                <li>Computer vision</li>
+                <li>Big Data</li>
+              </ul>
+            </div>
+            -->
+            <div class="col-md-7">
+              <h4>Education</h4>
+              <ul class="ul-edu fa-ul">
+                
+                <li>
+                  <i class="fa-li fa fa-graduation-cap"></i>
+                  <div class="description">
+                    <p class="course">PhD student in AI, Sep. 2019 -2022 </p>
+                    <p class="institution">LISIC, ULCO Calais, France (Co-tutelle)</p>
+                    <p class="institution">CCPC, ENSAM Casablanca, Morocco</p>
+                  </div>
+                </li>
+                
+                <li>
+                  <i class="fa-li fa fa-graduation-cap"></i>
+                  <div class="description">
+                    <p class="course">Master degree in Data science, 2017 - 2019</p>
+                     <p class="institution">FST Fez, USMBA, Morocco</p>
+                  </div>
+                </li>
+                
+                <li>
+                  <i class="fa-li fa fa-graduation-cap"></i>
+                  <div class="description">
+                    <p class="course">Bachelor in IT, 2014</p>
+                    <p class="institution">Lahcen Lyoussi High school, Morocco</p>
+                  </div>
+                </li>
+ 
+                
+              </ul>
+            </div>
+ 
+            <div class="col-md-9">
+              <h4>Experiences</h4>
+              <ul class="ul-edu fa-ul">
+                  
+                <li>
+                  <i class="fa-li fa  fa-briefcase"></i>
+                  <div class="description">
+                    <p class="course">Temporary Lecturer and Research Assistant, Sep.2022 – Now</p>
+                    <p class="institution">Computer science & Artificial Intelligence</p>
+                    <p class="institution">L'École d'Ingénieurs du Littoral-Côte-d'Opale</p>
+                    </div>
+                </li>
+
+                <li>
+                  <i class="fa-li fa fa-briefcase"></i>
+                  <div class="description">
+                    <p class="course">Lecturer in computer science, Sep.2021 – Jul. 2022</p>
+                    <p class="institution">- L'École d'Ingénieurs du Littoral-Côte-d'Opale</p>
+                    <p class="institution">- IUT du Littoral Côte d'Opale</p>
+                   </div>
+                </li>
+
+                <li>
+                  <i class="fa-li fa fa-briefcase"></i>
+                  <div class="description">
+                    <p class="course">Research Collaborator, Jun.2020 – Sep 2022</p>
+                    <p class="institution">Centre d’Etude et de Recherche pour l’Ingénierie et le Management de l’école HESTIM, Casablanca</p>
+                   </div>
+                </li>
+
+
+                <li>
+                  <i class="fa-li fa fa-briefcase"></i>
+                  <div class="description">
+                    <p class="course">Data Scientist, Aug – Dec 2019</p>
+                    <p class="institution">The Good Data Factory (Rabat, Maroc)</p>
+                  </div>
+                </li>
+ 
+                
+              </ul>
+            </div>
+<!--
+            <div class="col-md-5">
+              <h4>Interests</h4>
+              <ul class="ul-interests">
+                <li>Machine & Deep learning</li>
+                <li>Automated machine learning</li>
+                <li>Explainability of AI</li>
+                <li>Natural language processing</li>
+                <li>Computer vision</li>
+                <li>Big Data</li>
+              </ul>
+            </div>
+-->
+  <div class="col-md-15" style="margin-top: -10px;">
+     <h4>Interests</h4>
+     
+   <img class="rounded mx-auto d-block" style="margin-top: -25px;" src="/images/homepage/WordCloud.png" itemprop="image" alt="Avatar">
+          
+  </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</section>
+ 
+
+
+
+
+{{ end }}
+
+

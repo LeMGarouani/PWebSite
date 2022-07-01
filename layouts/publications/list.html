@@ -1,0 +1,62 @@
+{{ define "main" }}
+<div class="row justify-content-center">
+  <div class="col-md-12 col-lg-10 col-xl-10">
+    <article>
+      <h1 class="text-center">{{ .Title }}</h1>
+      <div class="text-center">{{ .Content }}</div>
+			<h3>Articles 📖</h3>
+			<div class="card-list">
+				{{ range $index, $publication := (.Data.Pages) }}
+					{{ if eq .Params.category 1 }}
+					<div class="card" style="margin-bottom: 5px;">
+						<div class="card-body">
+							<h2 class="h5"><a class="stretched-link text-body" href="{{ .RelPermalink }}">{{ .Params.title }}</a></h2>
+							{{ partial "main/publication-meta.html" . -}}
+						</div>
+					</div>
+					{{ end }}
+				{{ end -}}
+			</div>
+			<h3>Conferences 📝</h3>
+			<div class="card-list">
+				{{ range $index, $publication := (.Data.Pages) }}
+					{{ if eq .Params.category 2 }}
+					<div class="card" style="margin-bottom: 5px;">
+						<div class="card-body">
+							<h2 class="h5"><a class="stretched-link text-body" href="{{ .RelPermalink }}">{{ .Params.title }}</a></h2>
+							{{ partial "main/publication-meta.html" . -}}
+						</div>
+					</div>
+					{{ end }}
+				{{ end -}}
+			</div>
+			<h3>Softwares 💻</h3>
+			<div class="card-list">
+				{{ range $index, $publication := (.Data.Pages) }}
+					{{ if eq .Params.category 3 }}
+					<div class="card" style="margin-bottom: 5px;">
+						<div class="card-body">
+							<h2 class="h5"><a class="stretched-link text-body" href="{{ .RelPermalink }}">{{ .Params.title }}</a></h2>
+							{{ partial "main/publication-meta.html" . -}}
+						</div>
+					</div>
+					{{ end }}
+				{{ end -}}
+			</div>
+			<h3>Others 📒</h3>
+			<div class="card-list">
+				{{ range $index, $publication := (.Data.Pages) }}
+					{{ if eq .Params.category 4 }}
+					<div class="card" style="margin-bottom: 5px;">
+						<div class="card-body">
+							<h2 class="h5"><a class="stretched-link text-body" href="{{ .RelPermalink }}">{{ .Params.title }}</a></h2>
+							{{ partial "main/publication-meta.html" . -}}
+						</div>
+					</div>
+					{{ end }}
+				{{ end -}}
+			</div>
+    </article>
+  </div>
+</div>
+{{ end }}

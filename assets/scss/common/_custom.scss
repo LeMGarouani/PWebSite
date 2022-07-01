@@ -1,0 +1,129 @@
+/** Custom styles */
+.btn-copy {
+    color: #007acc !important;
+    border-color: #006bb3 !important;
+    background-color: #007acc !important;
+}
+
+.btn-copy:hover {
+    color: #007acc !important;
+    border-color: #0052cc !important;
+    background-color: #0066cc !important;
+}
+
+.header-bar {
+    border-image-source: linear-gradient(90deg, #006080, #0080ff 50%, #669999)
+}
+
+#profile {
+  text-align: center;
+  padding: 30px 10px;
+  position: relative;
+}
+
+.portrait {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.portrait-title h2 {
+  font-size: 1.75em;
+  font-weight: 300;
+  color: #000000;
+  margin: 20px 0 10px 0;
+}
+
+[data-dark-mode] .portrait-title h2 {
+  color: #ffffff;
+}
+
+.portrait-title h3 {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(0,0,0, 0.54);
+  margin: 0px 0 10px 0;
+}
+
+[data-dark-mode] .portrait-title h3 {
+  color: rgba(255, 255, 255, 0.80);
+}
+
+ul.network-icon {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+#profile .network-icon {
+  margin-top: 30px;
+}
+
+.network-icon li {
+  margin-right: 10px;
+}
+
+.network-icon li:last-of-type {
+  margin-right: 0;
+}
+
+.network-icon li:hover {
+  transform: scale(1.2)
+}
+
+ul.ul-interests li {
+  font-size: 0.9rem;
+}
+
+ul.ul-edu {
+  list-style: none;
+}
+
+ul.ul-edu li {
+  position: relative;
+  padding: 0px 15px 4px 3px;
+}
+
+ul.ul-edu li .description p {
+  margin: 0;
+}
+
+ul.ul-edu li .description p.course {
+  font-size: 0.9rem;
+}
+
+ul.ul-edu li .description p.institution {
+  font-size: 0.75rem;
+  color: rgba(0,0,0,0.6);
+}
+
+[data-dark-mode] ul.ul-edu li .description p.institution {
+  color: rgba(255, 255, 255,0.6);
+}
+
+.vertical-center {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+/** other data */
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+.wrap {
+  flex: 1 0 auto;
+}
+.footer {
+  margin-top: 10px;
+  flex-shrink: 0;
+}
