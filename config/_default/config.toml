@@ -1,5 +1,5 @@
-baseurl = "https://jeromebuisine.fr"
-author = "en/jbuisine"
+baseurl = "/"
+author = "en"
 
 canonifyURLs = false
 disableAliases = true
