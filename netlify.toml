@@ -33,6 +33,11 @@
       "bing",
       "yandex"
     ]
+ 
+[[headers]]
+for = "/*"
+[headers.values]
+Access-Control-Allow-Origin = "*"
 
 [dev]
   framework = "#custom"
