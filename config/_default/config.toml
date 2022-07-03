@@ -1,4 +1,4 @@
-baseurl = "/"
+baseurl = "https://62c16c37355a9e6b5c111801--snazzy-muffin-e26dca.netlify.app"
 author = "en"
 
 canonifyURLs = false
