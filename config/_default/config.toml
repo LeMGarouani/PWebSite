@@ -1,4 +1,4 @@
-baseurl = "https://jeromebuisine.fr"
+baseurl = "/"
 author = "en"
 
 canonifyURLs = false
