@@ -9,9 +9,9 @@ images: []
 For any question, please contact:
  
 
- - <i class="fa fa-envelope  " aria-hidden="true"></i> mgarouani@gmail.com
+ - <img src="/images/homepage/envelope-fill.svg"  style="width: 3%;">  mgarouani@gmail.com
  
- - <i class="fa fa-phone " aria-hidden="true"></i> +33 644779907
+ - <img src="/images/homepage/telephone-fill.svg"  style="width: 3%;">  +33 644779907
 
--  <i class="fa fa-map-marker" aria-hidden="true"></i> Maison de la Recherche Blaise Pascal - BP 719, 50, rue Ferdinand Buisson, 62228 Calais
+-  <img src="/images/homepage/geo-alt-fill.svg"  style="width: 3%;">  Maison de la Recherche Blaise Pascal - BP 719, 50, rue Ferdinand Buisson, 62228 Calais
  
