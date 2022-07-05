@@ -1,5 +1,5 @@
 ---
-title: "Towards an automatic assistance framework for the selection and configuration of machine-learning-based data analytics"
+title: "MAC: An Open and Free Moroccan Arabic Corpus for Sentiment Analysis"
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
@@ -8,18 +8,18 @@ profile: false  # Show author profile?
 comments: false  # Show comments?
 
 # Schedule page publish date (NOT talk date).
-publishDate: "2021-03-18"
+publishDate: "2021-10-28"
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
 authors: []
 
 # Location of event.
-location: "ENSIAS, Rabat- Morocco"
+location: "Safranbolu, Türkiye"
 
 # Name of event and optional event URL.
 
 # Abstract. What's your talk about?
-abstract: "The International Conference On Big Data and Internet of Things"
+abstract: "The 6th International Conference on Smart City Applications"
 
 # Summary. An optional shortened abstract.
 summary: ""

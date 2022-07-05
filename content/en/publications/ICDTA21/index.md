@@ -4,6 +4,7 @@ date: "2021-04-28"
 information: "The 23rd International Conference on Enterprise Information Systems(ICEIS)"
 category: 2 # 1: article, 2: conference, 3: softwares, 4: others
 contributors: ["Moncef Garouani", "Hanae Chrita", "Jamal Kharroubi"]
+doi: "10.1007/978-3-030-73882-2_54"
 ---
 
 # Abstract
@@ -11,11 +12,7 @@ This paper introduces a framework system that analyzes the data extracted from t
 
 
 
-
-# URI
-
-- **DOI**: [https://doi.org/10.1007/978-3-030-73882-2_54](https://doi.org/10.1007/978-3-030-73882-2_54)
-
+ 
 # Citation
 
 ```

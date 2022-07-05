@@ -4,6 +4,7 @@ date: "2021-09-27"
 information: "SoftwareX"
 category: 3 # 1: article, 2: conference, 3: softwares, 4: others
 contributors: ["Moncef Garouani", "Adeel Ahmad", "Mourad Bouneffa", "al."]
+doi: "10.1016/j.softx.2021.100919"
 ---
 
 # Abstract
@@ -11,9 +12,7 @@ The Machine Learning (ML) based solutions in manufacturing industrial contexts o
 
 
 
-# URI
-
-- **DOI**: [https://doi.org/10.1016/j.softx.2021.100919](https://doi.org/10.1016/j.softx.2021.100919)
+ 
 
 # Citation
 

@@ -4,6 +4,7 @@ date: "2021-04-28"
 information: "The 23rd International Conference on Enterprise Information Systems(ICEIS)"
 category: 2 # 1: article, 2: conference, 3: softwares, 4: others
 contributors: ["Moncef Garouani", "Adeel Ahmad", "Mourad Bouneffa", "al."]
+doi: "10.5220/0010457107090716"
 ---
 
 # Abstract
@@ -11,10 +12,8 @@ In context of the fourth industrial revolution (industry 4.0), the industrial bi
 
 
 
-# URI
-
-- **DOI**: [https://doi.org/10.5220/0010457107090716](https://doi.org/10.5220/0010457107090716)
-
+ 
+ 
 # Citation
 
 ```

@@ -4,6 +4,7 @@ date: "2022-05-19"
 information: "The International Conference on Artificial Intelligence and Big Data in Digital Era"
 category: 2 # 1: article, 2: conference, 3: softwares, 4: others
 contributors: ["Moncef Garouani", "Adeel Ahmad", "Mourad Bouneffa", "al."]
+doi: "10.1007/978-3-030-97610-1_22"
 ---
 
 # Abstract
@@ -11,11 +12,7 @@ Industrial Data Analytics (IDA) provide methods and tools to cope with the vast 
 
 
 
-
-# URI
-
-- **DOI**: [https://doi.org/10.1007/978-3-030-97610-1_22](https://doi.org/10.1007/978-3-030-97610-1_22)
-
+ 
 # Citation
 
 ```

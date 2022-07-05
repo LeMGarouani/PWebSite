@@ -19,7 +19,7 @@ location: "Online"
 # Name of event and optional event URL.
 
 # Abstract. What's your talk about?
-abstract: "23rd International Conference on Enterprise Information Systems"
+abstract: "The 23rd International Conference on Enterprise Information Systems"
 
 # Summary. An optional shortened abstract.
 summary: ""

@@ -4,6 +4,7 @@ date: "2022-02-10"
 information: "The International Journal of Advanced Manufacturing Technology"
 category: 1 # 1: article, 2: conference, 3: softwares, 4: others
 contributors: ["Moncef Garouani", "Adeel Ahmad", "Mourad Bouneffa", "al."]
+doi: "10.1007/s00170-022-08761-9"
 ---
 
 # Abstract
@@ -11,11 +12,7 @@ Industrial systems resources are capable of producing large amount of data. Thes
 
 
 
-
-# URI
-
-- **DOI**: [https://doi.org/10.1007/s00170-022-08761-9](hhttps://doi.org/10.1007/s00170-022-08761-9)
-
+ 
 # Citation
 
 ```
