@@ -1,6 +1,9 @@
 baseurl = "/"
 author = "en"
 
+custom_css = ["css/font-awesome.min.css"]
+
+
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
