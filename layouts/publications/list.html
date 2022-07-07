@@ -102,6 +102,29 @@
 		  </div>
 
 
+		  <div class="accordion-item">
+			<h2 class="accordion-header" id="panelsStayOpen-headingfive">
+			  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsefive" aria-expanded="false" aria-controls="panelsStayOpen-collapsefive">
+				  <b>Theses 📓 </b>
+				  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info ">3<span class="visually-hidden"></span>
+			  </button>
+			</h2>
+			<div id="panelsStayOpen-collapsefive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingfive">
+			  <div id="collapseTwo" class="card-list" data-bs-parent="#accordion">
+				  {{ range $index, $publication := (.Data.Pages) }}
+					  {{ if eq .Params.category 5 }}
+					  <div class="card" style="margin-bottom: 5px;">
+						  <div class="card-body">
+							  <h2 class="h5"><a class="stretched-link text-body" href="{{ .RelPermalink }}">{{ .Params.title }}</a></h2>
+							  {{ partial "main/publication-meta.html" . -}}
+						  </div>
+					  </div>
+					  {{ end }}
+				  {{ end -}}
+			  </div>
+			</div>
+		  </div>
+
    		 
  	  
 
