@@ -8,8 +8,9 @@ doi: "10.1007/978-3-030-97610-1_22"
 ---
 
 # Abstract
+<p style='text-align: justify;'>
 Industrial Data Analytics (IDA) provide methods and tools to cope with the vast amounts of data. The big industrial data is generated continuously during the execution of manufacturing processes. Hence, the predictive maintenance is among the most critical activities of the manufacturing processes concerned by the IDA. We believe that the maintenance activity can be managed by using Machine Learning (ML) methodologies, especially the data analytics solutions based on meta-learning. The challenge is then to facilitate the application of ML by the industry 4.0 actors, who are supposedly not AI specialists. The automated machine learning (AutoML) seems to be the area dealing with this challenge. In this paper, we primarily discuss the challenges of assisting industry 4.0 actors to implement ML algorithms in the context of predictive maintenance. Later on, we present a novel AutoML based framework for the industry 4.0 actors and researchers, who presumably have limited expertise in ML domain. It aims to enable them to generate ML-based data analytics solutions and deploy these solutions in manufacturing workflows. Specifically, the framework implements the approaches based on meta-learning and uses the web semantic concepts in this regard. In the context of Industry 4.0 such approaches lead to the implementation of the smart factory concepts. It makes the factory processes more proactive on the basis of predictive knowledge extracted from the various manufacturing devices, sensors, and business processes in real-time.
-
+</p>
 
  
 

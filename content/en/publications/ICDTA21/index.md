@@ -8,8 +8,9 @@ doi: "10.1007/978-3-030-73882-2_54"
 ---
 
 # Abstract
+<p style='text-align: justify;'>
 This paper introduces a framework system that analyzes the data extracted from the social network Twitter. In our study, we deal with Moroccan tweets written in Standard Arabic (SA) and Moroccan Dialect (MD). This system allows collecting, processing and visualizing sentiments that could be extracted from Moroccan user’s communication. As a training set, 36114 tweets were collected but only 13,550 tweets were found to be valid. Firstly, the tweets are classified into 2 categories: SA and MD. The tweets belonging to each category are then classified into 4 classes: positive, negative, neutral or mixed. We have performed several experiments to evaluate all the possible combinations of the following weight schemes: N-grams and stemming terms techniques. The experimental results provide the best scenario for each classifier and indicate that LSTM classifier using word embedding without removing Stopwords outperforms CNN classifier as well as the CNN-LSTM classifier (with the same features), and it outperforms SVM with term frequency–inverse document frequency (TF-IDF) weighting scheme with stemming through Bigrams feature. Moreover, the obtained results outperformed other comparable related work results.
-
+</p>
 
 
  
