@@ -27,5 +27,4 @@ It is a known fact that the selection of one or more opti-mized algorithms and t
   title = {Scalable Meta-Bayesian Based Hyperparameters Optimization for Machine Learning},
   booktitle = {Smart Applications and Data Analysis}
 }
-}
 ```
