@@ -6,6 +6,7 @@
         <h2>{{ .Title }}</h2>
         {{ partial "main/publication-meta.html" . }}
         <small>DOI: <a href="https://doi.org/{{ .Params.doi }}" target="_blank" style="color: rgb(153, 17, 17);"><u>{{ .Params.doi }}</u></a> </small>
+        {{ if eq .Params.category 5 }} <small>Link: <a href="{{ .Params.doi }}" target="_blank" style="color: rgb(153, 17, 17);"><u>{{ .Params.doi }}</u></a> </small> {{ end }}
       </div>
       <p class="lead">{{ .Params.lead | safeHTML }}</p>
       {{ .Content }}
