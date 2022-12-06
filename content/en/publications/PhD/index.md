@@ -4,10 +4,9 @@ date: "2022-09-27"
 information: "PhD thesis - Laboratoire d’Informatique Signal et Image de la Côte d’Opale, Calais France"
 category: 5 # 1: article, 2: conference, 3: softwares, 4: Poster
 contributors: ["Moncef Garouani"]
-doi: "https://theses.hal.science/tel-03842609"
+link: "https://theses.hal.science/tel-03842609"
 ---
 
-<a href=" " target="_blank"><img src="phd.png" /></a>
 
 # Abstract
 <p style='text-align: justify;'>
