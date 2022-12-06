@@ -5,8 +5,8 @@ information: "The 4th International Conference on Smart Applications and Data An
 category: 2 # 1: article, 2: conference, 3: softwares, 4: others
 contributors: ["Moncef Garouani", "Adeel Ahmad", "Mourad Bouneffa", "Mohamed Hamlich"]
 doi: "10.1007/978-3-031-20490-6_14"
+status: 0
 ---
-<p class="warning">In press</p>
 
 
 # Abstract
