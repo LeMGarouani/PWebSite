@@ -1,11 +1,12 @@
 ---
 title: "Towards an automatic assistance framework for the selection and configuration of machine-learning-based data analytics solutions in industry 4.0"
 date: "2022-03-19"
-information: "The Fifth International Conference on Big Data and Internet of Things (BDIoT'21"
+information: "The Fifth International Conference on Big Data and Internet of Things (BDIoT'21)"
 category: 2 # 1: article, 2: conference, 3: softwares, 4: others
 contributors: ["Moncef Garouani", "Mohamed Hamlich","Adeel Ahmad", "Mourad Bouneffa", "al."]
 doi: "10.1007/978-3-030-97610-1_22"
 ---
+
 
 # Abstract
 <p style='text-align: justify;'>

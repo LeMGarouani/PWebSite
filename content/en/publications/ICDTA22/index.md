@@ -1,7 +1,7 @@
 ---
 title: "Leveraging the Automated Machine Learning for Arabic Opinion Mining: A Preliminary Study on AutoML Tools and Comparison to Human Performance"
 date: "2022-05-06"
-information: "International Conference on Digital Technologies and Applications"
+information: "The International Conference on Digital Technologies and Applications"
 category: 2 # 1: article, 2: conference, 3: softwares, 4: others
 contributors: ["Moncef Garouani", "Kasun Zaysa"]
 doi: "10.1007/978-3-031-02447-4_17"

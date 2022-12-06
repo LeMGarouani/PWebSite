@@ -1,7 +1,7 @@
 ---
 title: "MAC: An Open and Free Moroccan Arabic Corpus for Sentiment Analysis"
 date: "2021-03-03"
-information: "The International Conference on Information, Communication & Cybersecurity"
+information: "The International Conference on Smart City Applications"
 category: 2 # 1: article, 2: conference, 3: softwares, 4: others
 contributors: ["Moncef Garouani", "Jamal Kharroubi"]
 doi: "10.1007/978-3-030-94191-8_68"
