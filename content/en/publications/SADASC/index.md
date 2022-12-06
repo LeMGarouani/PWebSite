@@ -1,6 +1,6 @@
 ---
 title: "Scalable Meta-Bayesian Based Hyperparameters Optimization for Machine Learning"
-date: "2021-04-28"
+date: "2022-09-24"
 information: "The 4th International Conference on Smart Applications and Data Analysis for Smart Cyber-Physical Systems (SADASC’22)"
 category: 2 # 1: article, 2: conference, 3: softwares, 4: others
 contributors: ["Moncef Garouani", "Adeel Ahmad", "Mourad Bouneffa", "Mohamed Hamlich"]
