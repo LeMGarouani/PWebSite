@@ -7,6 +7,7 @@ contributors: ["Moncef Garouani"]
 doi: "https://theses.hal.science/tel-03842609"
 ---
 
+<embed src="These_GAROUANI_Moncef.pdf" width="100%"height="100%">
 
 <a href="These_GAROUANI_Moncef.pdf" target="_blank"><img src="PHD.png" /></a>
 
