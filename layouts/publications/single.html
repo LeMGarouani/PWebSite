@@ -3,7 +3,7 @@
   <div class="col-md-12 col-lg-10 col-xl-10">
     <article>
       <div class="blog-header">
-        <h2>{{ .Title }}</h2> {{ if eq .Params.status 0 }}<span class="badge bg-warning text-dark">In press</span>{{ end }}
+        <h2>{{ .Title }} {{ if eq .Params.status 0 }}<span class="badge bg-warning text-dark">In press</span>{{ end }}</h2>
         {{ partial "main/publication-meta.html" . }}
         
         {{ if eq .Params.category 5 }} <small>Link: <a href="{{ .Params.doi }}" target="_blank" style="color: rgb(153, 17, 17);"><u>{{ .Params.doi }}</u></a> </small> 
