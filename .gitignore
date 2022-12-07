@@ -4,3 +4,4 @@ resources
 !content/en/resources
 .netlify
 .hugo_build.lock
+static/images/homepage/cv.svg
