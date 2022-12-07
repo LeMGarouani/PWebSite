@@ -12,6 +12,12 @@
   weight = 10
 
 [[main]]
+  name = "CV"
+  url = "/CV/"
+  weight = 20
+
+
+[[main]]
   name = "Talks"
   url = "/talks/"
   weight = 20
