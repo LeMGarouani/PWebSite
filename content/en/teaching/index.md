@@ -1,15 +1,20 @@
 ## Teaching
 
-| Institute | Description | Course|
-| ------ | ----------- |----------- |
-| EILCO Calais | Ing 1 |Architecture des ordinateurs
-| EILCO Calais | Ing 1 |Advanced algorithmic with OOP (in Python)
-| EILCO Calais | Ing 1 |Advanced algorithmic with OOP (in C++)
-| EILCO Calais | Ing 1 |Bases de données
-| IUT Calais | DUT 1 (first year degree in IT) |Algorithmic & OOP (in Python)
-| IUT Calais   | DUT 1 (first year degree in IT) |Mathématiques discrètes
-| IUT Calais    | DUT 2 (first year degree in IT) |Algorithmic & OOP (in Java)
-| IUT Calais    | DUT 2 (first year degree in IT) |Probabilités et statistiques
+Year| Institute | Description | Course|
+| ------| ------ | ----------- |----------- |
+|2022-2023| EILCO Calais | Ing 3 |Big Data & Data science
+|2022-2023| EILCO Calais | Ing 3 |Business intelligence & initiation au Big Data
+|2022-2023| EILCO Calais | Ing 1 |Algorithmique avancée et programmation C
+|2022-2023| EILCO Calais | Ing 1 |Bases de données
+
+|2021-2022| EILCO Calais | CP 1 |Architecture des ordinateurs
+|2021-2022| EILCO Calais | CP 1 |Advanced algorithmic with OOP (in Python)
+|2021-2022| EILCO Calais | CP 1 |Advanced algorithmic with OOP (in C++)
+|2021-2022| EILCO Calais | CP 1 |Bases de données
+|2021-2022| IUT Calais | DUT 1 (first year degree in IT) |Algorithmic & OOP (in Python)
+|2021-2022| IUT Calais   | DUT 1 (first year degree in IT) |Mathématiques discrètes
+|2021-2022| IUT Calais    | DUT 2 (first year degree in IT) |Algorithmic & OOP (in Java)
+|2021-2022| IUT Calais    | DUT 2 (first year degree in IT) |Probabilités et statistiques
 
 
 ## Co-supervision of research & developement activities
