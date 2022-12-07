@@ -10,10 +10,10 @@ Year| Institute | Description | Course|
 |2021-2022| EILCO Calais | CP 1 |Advanced algorithmic with OOP (in Python)
 |2021-2022| EILCO Calais | CP 1 |Advanced algorithmic with OOP (in C++)
 |2021-2022| EILCO Calais | CP 1 |Bases de données
-|2021-2022| IUT Calais | DUT 1 (first year degree in IT) |Algorithmic & OOP (in Python)
-|2021-2022| IUT Calais   | DUT 1 (first year degree in IT) |Mathématiques discrètes
-|2021-2022| IUT Calais    | DUT 2 (first year degree in IT) |Algorithmic & OOP (in Java)
-|2021-2022| IUT Calais    | DUT 2 (first year degree in IT) |Probabilités et statistiques
+|2021-2022| IUT Calais | DUT 1  |Algorithmic & OOP (in Python)
+|2021-2022| IUT Calais   | DUT 1  |Mathématiques discrètes
+|2021-2022| IUT Calais    | DUT 2  |Algorithmic & OOP (in Java)
+|2021-2022| IUT Calais    | DUT 2  |Probabilités et statistiques
 
 
 ## Co-supervision of research & developement activities
