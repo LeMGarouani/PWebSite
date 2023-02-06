@@ -14,7 +14,7 @@ To meet customer expectations and remain competitive, industrials try constantly
 # Citation
 
 ```
-@article{Garouani2022,
+@article{Garouani2022_iaes,
   doi = {10.11591/ijai.v12.i2.pp912-920},
   url = {https://doi.org/10.11591/ijai.v12.i2.pp912-920},
   year = {2022},
