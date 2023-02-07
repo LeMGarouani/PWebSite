@@ -18,7 +18,7 @@ The recent evolution of machine learning (ML) algorithms and the high level of e
 ```
 @article{Garouani2023_jbd,
   doi = {10.1186/s40537-023-00687-7},
-  url = {[https://doi.org/10.1186/s40537-022-00612-4](https://doi.org/10.1186/s40537-023-00687-7)},
+  url = {https://doi.org/10.1186/s40537-023-00687-7},
   year = {2023},
   month = feb,
   publisher = {Springer Science and Business Media {LLC}},
