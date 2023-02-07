@@ -17,12 +17,14 @@ To meet customer expectations and remain competitive, industrials try constantly
 @article{Garouani2022_iaes,
   doi = {10.11591/ijai.v12.i2.pp912-920},
   url = {https://doi.org/10.11591/ijai.v12.i2.pp912-920},
-  year = {2022},
-  month = aug,
-  volume = {12},
-  number = {2},
-  author = {Moncef Garouani and Adeel Ahmad and Mourad Bouneffa and Mohamed Hamlich and Gregory Bourguin and Arnaud Lewandowski},
-  title = {Using meta-learning for automated algorithms selection and configuration: an experimental framework for industrial big data},
+	year = 2023,
+	month = {jun},
+	publisher = {Institute of Advanced Engineering and Science},
+	volume = {12},
+	number = {2},
+	pages = {912},
+	author = {Meryem Chaabi and Mohamed Hamlich and Moncef Garouani},
+  title = {Product defect detection based on convolutional autoencoder and one-class classification},
   journal = {IAES International Journal of Artificial Intelligence}
 }
 ```
