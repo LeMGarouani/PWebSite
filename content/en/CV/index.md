@@ -1,4 +1,4 @@
- You can download my full CV in PDF. The last update date is December 07, 2022.
+ You can download my full CV in PDF. The last update date is February 10, 2023.
 
  - <a href="ShortCv.pdf" target="_blank">Short CV </a>
  
