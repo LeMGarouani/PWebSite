@@ -25,7 +25,7 @@ abstract: "La cité de l'IA - Rencontre autour des collaborations entre la Reche
 summary: ""
 
 # Is this a featured talk? (true/false)
-featured: false
+featured: true
 
 ---
 
