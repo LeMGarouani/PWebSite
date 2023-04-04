@@ -1,6 +1,6 @@
 ---
 title: "Automated Decision Support Framework for IoT: Towards a Cyber Physical Recommendation System"
-date: 
+date: "2023-04-01"
 information: "The 25hd International Conference on Enterprise Information Systems(ICEIS)"
 category: 2 # 1: article, 2: conference, 3: softwares, 4: others
 contributors: ["Mohammad Choaib", "Moncef Garouani", "Mourad Bouneffa", "et la."]
