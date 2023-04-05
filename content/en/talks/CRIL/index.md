@@ -1,5 +1,5 @@
 ---
-title: "Big industrial data mining through explainable automated machine learning"
+title: "Towards Efficient and Explainable Automated Machine Learning Pipelines Design"
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
