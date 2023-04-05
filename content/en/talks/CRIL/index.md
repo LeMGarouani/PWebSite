@@ -14,12 +14,12 @@ publishDate: "2023-04-05"
 authors: []
 
 # Location of event.
-location: "Séminaire au Centre de Recherche en Informatique de Lens (CRIL), Lens, France"
+location: "Lens, France"
 
 # Name of event and optional event URL.
 
 # Abstract. What's your talk about?
-abstract: "Big industrial data mining through explainable automated machine learning"
+abstract: "Séminaire au Centre de Recherche en Informatique de Lens(CRIL)-- Université d’Artois"
 
 # Summary. An optional shortened abstract.
 summary: ""
