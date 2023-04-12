@@ -22,8 +22,8 @@ titleHome = "Moncef GAROUANI"
 ## JSON-LD
 schemaType = "Person"
 #schemaType = "Organization"
-schemaName = "Personal - Moncef GAROUANI"
-#schemaAuthor = "Henk Verlinde"
+schemaName = "Moncef GAROUANI"
+schemaAuthor = "Moncef GAROUANI"
 #schemaAuthorTwitter = "https://twitter.com/henkverlinde"
 #schemaAuthorLinkedIn = "https://www.linkedin.com/in/henkverlinde/"
 schemaAuthorGitHub = "https://github.com/prise3d"
@@ -54,10 +54,10 @@ lqipWidth = "20x"
 smallLimit = "300"
 
 # Footer
-footer = "Copyright © 2022 Moncef GAROUANI"
+footer = "Copyright © 2023 Moncef GAROUANI"
 
 # Feed
-copyRight = "Copyright © 2022 Moncef GAROUANI"
+copyRight = "Copyright © 2023 Moncef GAROUANI"
 
 # Alert
 alert = false
