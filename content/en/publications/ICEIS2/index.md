@@ -1,7 +1,7 @@
 ---
 title: "Explaining Meta-Features Importance in Meta-Learning Through Shapley Values"
 date: "2023-04-01"
-information: "The 25hd International Conference on Enterprise Information Systems(ICEIS)"
+information: "The 25th International Conference on Enterprise Information Systems(ICEIS)"
 category: 2 # 1: article, 2: conference, 3: softwares, 4: others
 contributors: ["Moncef Garouani", "Adeel Ahmad", "Mourad Bouneffa"]
 doi: 
