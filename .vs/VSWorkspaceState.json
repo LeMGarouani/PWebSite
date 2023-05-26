@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\config\\next",
+    "\\config\\production",
+    "\\config\\_default",
+    "\\layouts",
+    "\\layouts\\partials",
+    "\\layouts\\partials\\head",
+    "\\layouts\\partials\\header"
+  ],
+  "SelectedNode": "\\layouts\\partials\\header\\header.html",
+  "PreviewInSolutionExplorer": false
+}
