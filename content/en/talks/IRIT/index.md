@@ -14,7 +14,7 @@ publishDate: "2023-05-26"
 authors: []
 
 # Location of event.
-location: "Séminaire à l'Institut de recherche en informatique de Toulouse- IRIT, France"
+location: "l'Institut de recherche en informatique de Toulouse- IRIT, France"
 
 # Name of event and optional event URL.
 
