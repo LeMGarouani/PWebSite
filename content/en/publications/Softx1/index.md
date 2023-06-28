@@ -16,7 +16,7 @@ The Machine Learning (ML) based solutions in manufacturing industrial contexts o
 # Citation
 
 ```
-@article{Garouani2022,
+@article{Garouani2022_softx,
   doi = {10.1016/j.softx.2021.100919},
   url = {https://doi.org/10.1016/j.softx.2021.100919},
   year = {2022},
