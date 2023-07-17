@@ -2,18 +2,11 @@
 
 Year| Institute | Description | Course|
 | ----------- |----------- | ----------- |----------- |
-|2022-2023| EILCO | Ing 3 |Big Data & Data science
-|2022-2023| EILCO | Ing 3 |Business intelligence & initiation <br> au Big Data
-|2022-2023| EILCO | Ing 1 |Algorithmique avancée et programmation C
-|2022-2023| EILCO | Ing 1 |Bases de données
-|2021-2022| EILCO | CP 1 |Architecture des ordinateurs
-|2021-2022| EILCO | CP 1 |Advanced algorithmic with OOP (in Python)
-|2021-2022| EILCO | CP 1 |Advanced algorithmic with OOP (in C++)
-|2021-2022| EILCO | CP 1 |Bases de données
-|2021-2022| IUT Calais | DUT 1  |Algorithmic & OOP (in Python)
-|2021-2022| IUT Calais   | DUT 1  |Mathématiques discrètes
-|2021-2022| IUT Calais    | DUT 2  |Algorithmic & OOP (in Java)
-|2021-2022| IUT Calais    | DUT 2  |Probabilités et statistiques
+|2022-2023| EILCO | ING 3 |- Big Data & Data science <br> - Business intelligence & initiation au Big Data
+|2022-2023| EILCO | ING 1 |- Bases de données <br> - Algorithmique avancée et programmation C
+|2021-2022| EILCO | CP 1 |- Architecture des ordinateurs <br> - Advanced algorithmic with OOP (in Python)<br> - Advanced algorithmic with OOP (in C++) <br> - Bases de données
+|2021-2022| IUT Calais | DUT 1  |- Algorithmic & OOP (in Python) <br> - Mathématiques discrètes
+|2021-2022| IUT Calais    | BUT 2  |- Algorithmic & OOP (in Java) <br> - Probabilités et statistiques
 
 
 ## Co-supervision of research & developement activities
