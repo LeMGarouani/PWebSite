@@ -3,7 +3,7 @@
 Year| Institute | Description | Course|
 | ----------- |----------- | ----------- |----------- |
 |2022-2023| EILCO | Ing 3 |Big Data & Data science
-|2022-2023| EILCO | Ing 3 |Business intelligence & initiation au Big Data
+|2022-2023| EILCO | Ing 3 |Business intelligence & initiation <br> au Big Data
 |2022-2023| EILCO | Ing 1 |Algorithmique avancée et programmation C
 |2022-2023| EILCO | Ing 1 |Bases de données
 |2021-2022| EILCO | CP 1 |Architecture des ordinateurs
