@@ -2,7 +2,7 @@
 
 Year| Institute | Description | Course|
 | ----------- |----------- | ----------- |----------- |
-|2022-2023| EILCO | ING 3 |- Big Data & Data science <br> - Business intelligence & initiation au Big Data
+|2022-2023| EILCO | ING 3 |- Big Data & Data science <br> - Explainable Artificial Intelligence <br> - Business intelligence & initiation au Big Data
 |2022-2023| EILCO | ING 1 |- Bases de données <br> - Algorithmique avancée et programmation C
 |2021-2022| EILCO | CP 1 |- Architecture des ordinateurs <br> - Advanced algorithmic with OOP (in Python)<br> - Advanced algorithmic with OOP (in C++) <br> - Bases de données
 |2021-2022| IUT Calais | DUT 1  |- Algorithmic & OOP (in Python) <br> - Mathématiques discrètes
