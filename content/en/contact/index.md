@@ -13,5 +13,6 @@ For any question, please contact:
  
  - <img src="/images/homepage/telephone-fill.svg"  style="width: 3%;">  +33 644779907
 
--  <img src="/images/homepage/geo-alt-fill.svg"  style="width: 3%;">  Maison de la Recherche Blaise Pascal - BP 719, 50, rue Ferdinand Buisson, 62228 Calais
+-  <img src="/images/homepage/geo-alt-fill.svg"  style="width: 3%;">  Université Toulouse Capitole - UFR d'Informatique - 2 rue du Doyen-Gabriel-Marty
+31042 Toulouse cedex 9
  
