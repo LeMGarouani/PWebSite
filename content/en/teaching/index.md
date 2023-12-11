@@ -2,6 +2,10 @@
 
 Year| Institute | Description | Course|
 | ----------- |----------- | ----------- |----------- |
+|2023-2024| UT Capitole | M1 |-  Intégration de données <br> - Modèle et démarche de SI décisionnel
+|2023-2024| UT Capitole | L2 |-  Bases de données
+|2022-2023| UT Capitole | M1 |-  Business intelligence
+|2022-2023| UT Capitole | M2 |-  Analyse de données et data mining <br> - Explainable Artificial Intelligence
 |2022-2023| EILCO | ING 3 |- Big Data & Data science <br> - Explainable Artificial Intelligence <br> - Business intelligence & initiation au Big Data
 |2022-2023| EILCO | ING 1 |- Bases de données <br> - Algorithmique avancée et programmation C
 |2021-2022| EILCO | CP 1 |- Architecture des ordinateurs <br> - Advanced algorithmic with OOP (in Python)<br> - Advanced algorithmic with OOP (in C++) <br> - Bases de données
