@@ -3,7 +3,7 @@ title: "Can we predict QPP? An approach based on multivariate outliers"
 date: "2024-03-24"
 information: " The 46th European Conference on Information Retrieval (ECIR)"
 category: 2 # 1: article, 2: conference, 3: softwares, 4: others
-contributors: ["Adrian-Gabriel Chifu", "Sébastien Déjean", "Moncef Garouani", "Josiane Mothe", "Diégo Ortiz" and "Md Zia Ullah"]
+contributors: ["Adrian-Gabriel Chifu", "Sébastien Déjean", "Moncef Garouani", "Josiane Mothe", "Diégo Ortiz" , "Md Zia Ullah"]
 doi: 
 status: 1
 
