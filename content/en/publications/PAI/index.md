@@ -27,5 +27,4 @@ author = {Garouani, Moncef and Bouneffa, Mourad},
  title = {Automated machine learning hyperparameters tuning through meta-guided Bayesian optimization},
  year = {2024}
 }
-}
 ```
