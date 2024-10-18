@@ -3,11 +3,11 @@
   <div class="col-md-12 col-lg-10 col-xl-10">
     <article>
       <div class="blog-header">
-        <h2>{{ .Title }}</h2> 
+        <h2>{{ .Title }}</h2>
         {{ partial "main/publication-meta.html" . }}
-        
-        {{ if eq .Params.category 5 }} <small>Link: <a href="{{ .Params.doi }}" target="_blank" style="color: rgb(153, 17, 17);"><u>{{ .Params.doi }}</u></a> </small> 
-        {{ else }} <small>DOI: <a href="https://doi.org/{{ .Params.doi }}" target="_blank" style="color: rgb(153, 17, 17);"><u>{{ .Params.doi }}</u></a> </small>{{ if eq .Params.status 1 }}<span class="badge bg-warning text-dark">In press</span>{{ end }}{{ if eq .Params.status 2 }}<span class="badge bg-info text-dark">Submitted</span>{{ end }}{{ end }}
+
+        {{ if eq .Params.category 5 }} <small>Link: <a href="{{ .Params.doi }}" target="_blank" style="color: rgb(153, 17, 17);"><u>{{ .Params.doi }}</u></a> </small>
+        {{ else }} <small>DOI: <a href="https://doi.org/{{ .Params.doi }}" target="_blank" style="color: rgb(153, 17, 17);"><u>{{ .Params.doi }}</u></a> </small>{{ if eq .Params.status 1 }}<span class="badge bg-warning text-dark">Submitted</span>{{ end }}{{ if eq .Params.status 2 }}<span class="badge bg-info text-dark">In press</span>{{ end }}{{ end }}
       </div>
       <p class="lead">{{ .Params.lead | safeHTML }}</p>
       {{ .Content }}
