@@ -18,18 +18,21 @@ Ceci est un résumé en français de l’article intitulé ”Can we predict QPP
 # Citation
 
 ```
-@inbook{Garouani_2024_ECIR,
- author = {Chifu, Adrian-Gabriel and Déjean, Sébastien and Garouani, Moncef and Mothe, Josiane and Ortiz, Diégo and Ullah, Md Zia},
- booktitle = {Advances in Information Retrieval},
- doi = {10.1007/978-3-031-56063-7_38},
- isbn = {9783031560637},
- issn = {1611-3349},
- pages = {458–467},
- publisher = {Springer Nature Switzerland},
- title = {Can We Predict QPP? An Approach Based on Multivariate Outliers},
- year = {2024}
+@inproceedings{chifu:hal-04580035,
+  TITLE = {Prédictibilité de la prédiction de la performance des requêtes? Une approche basée sur les valeurs aberrantes multivariées},
+  AUTHOR = {Chifu, Adrian-Gabriel and Déjean, Sébastien and Garouani, Moncef and Mothe, Josiane and Ortiz, Diégo and Ullah, Md Zia},
+  URL = {https://hal.science/hal-04580035},
+  BOOKTITLE = {19ème Conférence francophone en Recherche d’Information et Applications},
+  ADDRESS = {La Rochelle, France},
+  ORGANIZATION = {{Association ARIA}},
+  PUBLISHER = {{Springer Nature Switzerland}},
+  SERIES = {Lecture Notes in Computer Science},
+  VOLUME = {14610},
+  PAGES = {458--467},
+  YEAR = {2024},
+  PDF = {https://hal.science/hal-04580035v1/file/main.pdf},
+  HAL_ID = {hal-04580035},
 }
-
 
 ```
 
