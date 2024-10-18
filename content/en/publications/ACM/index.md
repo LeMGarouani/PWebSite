@@ -5,7 +5,7 @@ information: "Artificial Intelligence Review"
 category: 1 # 1: article, 2: conference, 3: softwares, 4: others
 contributors: ["Moncef Garouani", "Adeel Ahmad", "Mourad Bouneffa"]
 doi: "10.21203/rs.3.rs-4106982/v1"
-status: 2
+status: 1
 ---
 
 # Abstract
