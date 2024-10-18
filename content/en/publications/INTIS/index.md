@@ -5,7 +5,7 @@ information: "12th International Conference on New Technologies, Artificial Inte
 category: 2 # 1: article, 2: conference, 3: softwares, 4: others
 contributors: ["Kaoutar El Azaar", "Moncef Garouani", " Asmae Chakir", "Mohamed Hamlich", "Franck Ravat"]
 doi:
-status: 1
+status: 2
 
 ---
 

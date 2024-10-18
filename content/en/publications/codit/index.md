@@ -5,7 +5,7 @@ information: "10th 2024 International Conference on Control, Decision and Inform
 category: 2 # 1: article, 2: conference, 3: softwares, 4: others
 contributors: ["Mohammad Choaib", "Moncef Garouani", " Mourad Bouneffa"]
 doi:
-status: 1
+status: 2
 
 ---
 
