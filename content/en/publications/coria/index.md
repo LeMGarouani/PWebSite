@@ -1,7 +1,7 @@
 ---
 title: "Prédictibilité de la prédiction de la performance des requêtes? Une approche basée sur les valeurs aberrantes multivariées"
 date: "2024-04-03"
-information: " 19ème COnférence francophone en Recherche d’Information et Applications (CORIA 2024)"
+information: " 19ème Conférence francophone en Recherche d’Information et Applications (CORIA 2024)"
 category: 2 # 1: article, 2: conference, 3: softwares, 4: others
 contributors: ["Adrian-Gabriel Chifu", "Sébastien Déjean", "Moncef Garouani", "Josiane Mothe", "Diégo Ortiz" , "Md Zia Ullah"]
 doi: https://hal.science/hal-04580035v1
