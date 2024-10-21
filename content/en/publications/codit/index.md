@@ -3,9 +3,8 @@ title: "IoT Sensor Selection in Cyber-Physical Systems: Leveraging Large Languag
 date: "2024-07-01"
 information: "10th 2024 International Conference on Control, Decision and Information Technologies (CoDIT 2024)"
 category: 2 # 1: article, 2: conference, 3: softwares, 4: others
-contributors: ["Mohammad Choaib", "Moncef Garouani", " Mourad Bouneffa"]
-doi:
-status: 2
+contributors: ["Mohammad Choaib", "Moncef Garouani", " Mourad Bouneffa","Yasser Mohanna]
+doi: "10.1109/CoDIT62066.2024.10708357"
 
 ---
 
@@ -19,5 +18,14 @@ The emergence of Industry 4.0 has led a significant shift towards the widespread
 # Citation
 
 ```
+@INPROCEEDINGS{10708357,
+  author={Choaib, Mohammad and Garouani, Moncef and Bouneffa, Mourad and Mohanna, Yasser},
+  booktitle={2024 10th International Conference on Control, Decision and Information Technologies (CoDIT)}, 
+  title={IoT Sensor Selection in Cyber-Physical Systems: Leveraging Large Language Models as Recommender Systems}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={2516-2519},
+  doi={10.1109/CoDIT62066.2024.10708357}}
 
 ```
