@@ -3,7 +3,7 @@ title: "IoT Sensor Selection in Cyber-Physical Systems: Leveraging Large Languag
 date: "2024-07-01"
 information: "10th 2024 International Conference on Control, Decision and Information Technologies (CoDIT 2024)"
 category: 2 # 1: article, 2: conference, 3: softwares, 4: others
-contributors: ["Mohammad Choaib", "Moncef Garouani", " Mourad Bouneffa","Yasser Mohanna]
+contributors: ["Mohammad Choaib", "Moncef Garouani", " Mourad Bouneffa","Yasser Mohanna"]
 doi: "10.1109/CoDIT62066.2024.10708357"
 
 ---
