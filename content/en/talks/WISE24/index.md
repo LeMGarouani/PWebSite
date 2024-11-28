@@ -8,7 +8,7 @@ profile: false  # Show author profile?
 comments: false  # Show comments?
 
 # Schedule page publish date (NOT talk date).
-publishDate: "2024-011-28"
+publishDate: "2024-11-28"
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
 authors: []
