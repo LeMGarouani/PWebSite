@@ -14,12 +14,12 @@ publishDate: "2023-05-26"
 authors: []
 
 # Location of event.
-location: "l'Institut de recherche en informatique de Toulouse- IRIT, France"
+location: "Toulouse, France"
 
 # Name of event and optional event URL.
 
 # Abstract. What's your talk about?
-abstract: "Big industrial data mining through explainable automated machine learning"
+abstract: "Séminaire à l'Institut de recherche en informatique de Toulouse- IRIT"
 
 # Summary. An optional shortened abstract.
 summary: ""
