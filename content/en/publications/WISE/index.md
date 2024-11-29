@@ -25,7 +25,7 @@ year="2025",
 publisher="Springer Nature Singapore",
 address="Singapore",
 pages="133--144",
-isbn="978-981-96-0573-6"
+isbn="978-981-96-0573-6",
 doi="10.1007/978-981-96-0573-6_10"
 }
 ```
