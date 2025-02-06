@@ -5,7 +5,6 @@ information: "36th IEEE International Conference on Tools with Artificial Intell
 category: 2 # 1: article, 2: conference, 3: softwares, 4: others
 contributors: ["Moncef Garouani", "Josiane Mothe", "Ayah Barhrhouj", " Julien Aligon"]
 doi: "10.1109/ICTAI62512.2024.00125"
-status: #2: In press
 
 ---
 
