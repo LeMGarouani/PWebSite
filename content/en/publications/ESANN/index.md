@@ -5,7 +5,7 @@ information: "33rd European Symposium on Artificial Neural Networks, Computation
 category: 2 # 1: article, 2: conference, 3: softwares, 4: others
 contributors: ["Meryem Ben Yahya", "Moncef Garouani",  " Julien Aligon"]
 
-statut : 2
+status: 2
 ---
 
 # Abstract
