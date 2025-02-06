@@ -4,8 +4,8 @@ date: "2024-09-13"
 information: "36th IEEE International Conference on Tools with Artificial Intelligence (ICTAI)"
 category: 2 # 1: article, 2: conference, 3: softwares, 4: others
 contributors: ["Moncef Garouani", "Josiane Mothe", "Ayah Barhrhouj", " Julien Aligon"]
-doi:
-status: 2
+doi: "10.1109/ICTAI62512.2024.00125"
+status: #2: In press
 
 ---
 
@@ -18,5 +18,12 @@ The rapid evolution of machine learning (ML) hasled to the widespread adoption o
 # Citation
 
 ```
+@INPROCEEDINGS{Garouani_ICTAI24,
+  author={Garouani, Moncef and Mothe, Josiane and Barhrhouj, Ayah and Aligon, Julien},
+  booktitle={2024 IEEE 36th International Conference on Tools with Artificial Intelligence (ICTAI)}, 
+  title={Investigating the Duality of Interpretability and Explainability in Machine Learning}, 
+  year={2024},
+  pages={861-867},
+  doi={10.1109/ICTAI62512.2024.00125}}
 
 ```
