@@ -4,8 +4,7 @@ date: "2025-02-01"
 information: "33rd European Symposium on Artificial Neural Networks, Computational Intelligence and Machine Learning(ESANN 2025)"
 category: 2 # 1: article, 2: conference, 3: softwares, 4: others
 contributors: ["Meryem Ben Yahya", "Moncef Garouani",  " Julien Aligon"]
-doi: 
-status: 2
+doi: 10.14428/esann/2025.es2025-72 
 ---
 
 # Abstract
@@ -16,6 +15,18 @@ Autism Spectrum Disorder (ASD) is a neurodevelopmental disorder characterized by
 # Citation
 
 ```
+ @inproceedings{Ben_Yahia_2025, 
+author={Ben Yahia, Meryem and Garouani, Moncef and Aligon, Julien}, 
+title={Multimodal Explainable Automated Diagnosis of Autistic Spectrum Disorder}, 
+url={http://dx.doi.org/10.14428/esann/2025.ES2025-72}, 
+DOI={10.14428/esann/2025.es2025-72}, 
+series={ESANN 2025}, 
+booktitle={ESANN 2025 proceesdings}, 
+publisher={Ciaco - i6doc.com}, 
+year={2025}, 
+pages={329–334},
+ collection={ESANN 2025} }
+
 
 
 ```
