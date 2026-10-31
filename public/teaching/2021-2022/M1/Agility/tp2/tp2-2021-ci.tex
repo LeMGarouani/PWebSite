@@ -1,0 +1,769 @@
+\documentclass[11pt,a4paper,oneside]{article}
+%\usepackage{listings}
+%\usepackage{ucs}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{txfonts}
+\usepackage{lmodern}
+\usepackage[pdftex]{thumbpdf}
+\usepackage[citecolor={purple},linkcolor={blue},urlcolor={blue},
+   a4paper,colorlinks,breaklinks]{hyperref}
+\usepackage{txfonts}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+\usepackage{../../../../resources/svglatex}
+
+\renewcommand\familydefault{\sfdefault}
+
+\usepackage{vmargin}
+\setmarginsrb{3.3cm}{2cm}{1cm}{1cm}{1cm}{1cm}{0.5cm}{0.5cm}
+
+%% \usepackage{fullpage}
+\usepackage{color}
+\usepackage{url}
+\usepackage[french]{babel}
+\usepackage{listings}
+\usepackage{listingsutf8}
+
+%\usepackage{minted}
+
+\author{Jérôme Buisine\\\url{jerome.buisine@univ-littoral.fr}}
+\title{\textbf{\textbf{TP1 Agilité}}\\
+\emph{Intégration, Livraison, Déploiement continus d'un projet}}
+\newcommand{\orangeline}{\rule{\linewidth}{1mm}}
+
+\lstset{language=C++,extendedchars=true,inputencoding=latin1,
+    basicstyle=\ttfamily\small, commentstyle=\ttfamily\color{green},
+      showstringspaces=false,basicstyle=\ttfamily\small}
+
+\lstdefinestyle{custombash}{
+	inputencoding=utf8,
+	mathescape,
+	basicstyle=\footnotesize\ttfamily,
+	language=bash,
+	breaklines=true,
+	frame             = lines,
+%	framexleftmargin = 8mm,
+	framerule         = 1pt,
+	rulecolor         = \color{gray!50!black},
+	xleftmargin=\parindent,
+	extendedchars=true, 
+	breaklines=true,
+	breakatwhitespace=true,
+	backgroundcolor = \color{gray!6},
+	literate=
+	{é}{{\'e}}{1}%
+	{è}{{\`e}}{1}%
+	{à}{{\`a}}{1}%
+	{â}{{\^a}}{1}%%%
+	{ç}{{\c{c}}}{1}%
+	{œ}{{\oe}}{1}%
+	{ù}{{\`u}}{1}%
+	{É}{{\'E}}{1}%
+	{È}{{\`E}}{1}%
+	{À}{{\`A}}{1}%
+	{Ç}{{\c{C}}}{1}%
+	{Œ}{{\OE}}{1}%
+	{Ê}{{\^E}}{1}%
+	{ê}{{\^e}}{1}%
+	{î}{{\^i}}{1}%
+	{ï}{{\"i}}{1}%%%
+	{ô}{{\^o}}{1}%
+	{û}{{\^u}}{1}%
+	%{=}{$\leftarrow$}{1}%
+	%{==}{$={}$}{1}
+}
+
+
+\lstdefinestyle{customc}{
+	inputencoding=utf8,
+	belowcaptionskip=1\baselineskip,
+	breaklines=true,
+	frame=L,
+	xleftmargin=\parindent,
+	language=C,
+	showstringspaces=false,
+	basicstyle=\footnotesize\ttfamily,
+	keywordstyle=\bfseries\color{green!40!black},
+	commentstyle=\itshape\color{purple!40!black},
+	identifierstyle=\color{blue},
+	stringstyle=\color{orange},
+}
+
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pgreen}{rgb}{0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+
+\lstdefinestyle{customJava} {
+	inputencoding=utf8,
+	language=Java,
+	breaklines=true,
+	frame             = lines,
+	%	framexleftmargin = 8mm,
+	framerule         = 1pt,
+	rulecolor         = \color{gray!50!black},
+	xleftmargin=\parindent,
+	extendedchars=true, 
+	breaklines=true,
+	breakatwhitespace=true,
+	showspaces=false,
+	showtabs=false,
+	breaklines=true,
+	showstringspaces=false,
+	breakatwhitespace=true,
+	commentstyle=\color{pgreen},
+	keywordstyle=\color{pblue},
+	stringstyle=\color{pred},
+	basicstyle=\footnotesize\ttfamily,
+	moredelim=[il][\textcolor{pgrey}]{$$},
+	moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%},
+	backgroundcolor = \color{black!6},
+	literate=
+	{é}{{\'e}}{1}%
+	{è}{{\`e}}{1}%
+	{à}{{\`a}}{1}%
+	{â}{{\^a}}{1}%%%
+	{ç}{{\c{c}}}{1}%
+	{œ}{{\oe}}{1}%
+	{ù}{{\`u}}{1}%
+	{É}{{\'E}}{1}%
+	{È}{{\`E}}{1}%
+	{À}{{\`A}}{1}%
+	{Ç}{{\c{C}}}{1}%
+	{Œ}{{\OE}}{1}%
+	{Ê}{{\^E}}{1}%
+	{ê}{{\^e}}{1}%
+	{î}{{\^i}}{1}%
+	{ï}{{\"i}}{1}%%%
+	{ô}{{\^o}}{1}%
+	{û}{{\^u}}{1}%
+	%{=}{$\leftarrow$}{1}%
+	%{==}{$={}$}{1}
+}
+
+\definecolor{forestgreen}{RGB}{34,139,34}
+\lstdefinestyle{customXML} {
+	inputencoding=utf8,
+	language=XML,
+	breaklines=true,
+	frame             = lines,
+	%	framexleftmargin = 8mm,
+	framerule         = 1pt,
+	rulecolor         = \color{green!50!black},
+	xleftmargin=\parindent,
+	extendedchars=true, 
+	breaklines=true,
+	breakatwhitespace=true,
+	emph={},
+	emphstyle=\color{red},
+	basicstyle=\footnotesize\ttfamily,
+	columns=fullflexible,
+	commentstyle=\color{gray}\upshape,
+	morestring=[b]",
+	morecomment=[s]{<?}{?>},
+	morecomment=[s][\color{forestgreen}]{<!--}{-->},
+	keywordstyle=\color{forestgreen},
+	stringstyle=\ttfamily\color{black}\normalfont,
+	tagstyle=\color{forestgreen}\bf,
+	morekeywords={attribute,xmlns,version,type,release},
+	otherkeywords={attribute=, xmlns=},
+	backgroundcolor = \color{green!6},
+}
+
+\definecolor{orange}{RGB}{255,140,0}
+\lstdefinestyle{customYML} {
+	inputencoding=utf8,
+	language=XML,
+	breaklines=true,
+	frame             = lines,
+	%	framexleftmargin = 8mm,
+	framerule         = 1pt,
+	rulecolor         = \color{gray!50!black},
+	xleftmargin=\parindent,
+	extendedchars=true, 
+	breaklines=true,
+	breakatwhitespace=true,
+	emph={},
+	emphstyle=\color{red},
+	basicstyle=\footnotesize\ttfamily,
+	columns=fullflexible,
+	commentstyle=\color{gray}\upshape,
+	morestring=[b]",
+	morecomment=[s]{<?}{?>},
+	morecomment=[s][\color{orange}]{<!--}{-->},
+	keywordstyle=\color{orange},
+	stringstyle=\ttfamily\color{black}\normalfont,
+	tagstyle=\color{orange}\bf,
+	morekeywords={attribute,xmlns,version,type,release},
+	otherkeywords={attribute=, xmlns=},
+	backgroundcolor = \color{gray!6},
+}
+
+
+\newcommand{\background}{
+\setlength{\unitlength}{1in}
+\begin{picture}(0,0)
+	\put(-1.6,-7.45){
+		\def\svgwidth{\columnwidth}
+		\includegraphics[height=25.7cm]{resources/images/background-tp1-2021.pdf}
+	}
+\end{picture}}
+
+\begin{document}
+\maketitle
+\background
+
+\begin{flushright}
+  Durée : 6 heures
+\end{flushright}
+
+\noindent\orangeline
+
+L'objectif de ce TP est de faire communiquer un ensemble d'outils permettant lors du développement d'un projet d'assurer à la fois son suivi, sa robustesse et son déploiement.
+
+\section{Travail}
+
+La mise en place d'une telle architecture de projet doit se faire dans un ordre bien défini. Il vous sera demandé de bien suivre les différentes étapes du TP \textbf{dans le même ordre que présentées}. Durant ce TP vous allez configurer chacun des outils requis par le client afin qu'il puisse procéder au bon développement du projet. Le contenu du projet restera ici à titre d'exemple pour vous permettre la bonne mise en place de l'architecture. Dans les TP suivants, il vous sera demandé d'utiliser la même architecture du projet mais sur un nouveau contenu.\\
+
+
+Voici l'ensemble des outils / langages qui seront utilisés pour ce TP :
+\begin{itemize}
+\item 1. IntelliJ/Idea (version Ultimate) comme environnement de développement;
+\item 2. \href{https://fr.wikipedia.org/wiki/Git}{git} comme  système de versionning du projet;
+\item 3. \href{https://gitlab.com/}{Gitlab} comme serveur d'hébergement de votre projet git (permettant l'accès à  des outils d'intégration, livraison, deploiement continus);
+\item 4. \href{https://maven.apache.org/}{Maven} qui sera utilisé dans notre cas pour la gestion des dépendances du projet ;
+\item 5. Le serveur d'API REST sera fourni et devra être exécuté via Java.
+\item 6. Le framework \href{https://junit.org/junit5/}{JUnit 5} (Java Unit) sera solicité pour l'intégration de tests unitaires du serveur d'API REST ;
+\item 7. Les langages web HTML/CSS/Javascript côté front permettant un visuel côté client (navigateur web) ;
+\item 8. \href{https://pmd.github.io/latest/index.html}{PMD} comme analyseur de qualité de code ;
+\item 9. \href{https://www.sonarqube.org/}{Sonarqube} comme serveur de rapports sur la qualité du code (couplé avec l'analyseur PMD) ;
+\end{itemize}
+
+\section{Initialisation du projet}
+
+L'étape de ce TP consistera à initialiser votre projet Java puis de l'héberger sur la plateforme Gitlab.
+
+\subsection{Création du projet}
+
+\subsubsection{Nommage du projet}
+À partir de votre IDE (Intellij), créer un projet Maven. Choisir le SDK 1.8 puis cliquer sur suivant. En ouvrant l'onglet `Artifact Coordinates`, configurer l'ensemble de votre projet comme indiqué ci-dessous :
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\textwidth]{resources/images/project-configuration.png}
+\end{figure}
+
+où \texttt{xxxxxx} est un identifiant composé de la manière suivante : Jean DUPONT => jdupont.
+
+\subsubsection{Configuration du SDK}
+\vspace{5mm}
+Il vous sera peut-être nécessaire par la suite de télécharger un SDK 1.8 via l'interface de configuration de structure du projet :
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\textwidth]{resources/images/download-jdk.png}
+\end{figure}
+
+\vspace{5mm}
+Afin de configurer votre projet pour Java 8, de la manière suivante :
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.6\textwidth]{resources/images/project-settings.png}
+\end{figure}
+
+\subsection{Initialisation de git}
+
+Via un terminal, accéder au dossier de votre projet puis initaliser \texttt{git} via son interface en ligne de commandes :
+
+\begin{lstlisting}[style=custombash]
+ git init
+\end{lstlisting}
+
+Créer une nouvelle branche nommée `develop` à partir de la branche `master` :
+
+\begin{lstlisting}[style=custombash]
+ git checkout -b develop
+\end{lstlisting}
+
+
+\vspace{5mm}
+
+Afin de simuler un environnement projet réel d'entreprise, il vous sera demandé durant ce TP d'utiliser \texttt{git} et la gestion de ses branches de la manière suivante :
+
+\begin{itemize}
+	\item \textbf{\texttt{master}} : branche de production du projet (livrable à fournir pour le client).
+	\item \textbf{\texttt{develop}} : branche de développement du projet avant livraison.
+	\item \textbf{\texttt{feature/XXXXX}} : branche liée à un développement en particulier où \texttt{XXXXX} est un nom donné à cette branche spécifiquement au développement demandé.
+\end{itemize}
+
+\vspace{5mm}
+
+Le processus d'utilisation de git durant le TP sera le suivant : 
+
+\begin{itemize}
+	\item 1. Pour chaque nouveau développement, créer une branche `feature/XXXXX` à partir de la branche `develop`.
+	\item 2. Une fois un développement terminé, fusionner les modifications de la branche `feature/XXXXX` vers la branche `develop`. Supprimer la branche `feature/XXXXX`.
+	\item 3. Mettre à jour le projet git distant hébergé sur Gitlab.
+	\item 4. Réaliser une livraison si demandée : mise à jour de la branche `master` par rapport à la branche `develop` puis mise à jour du projet git distant (serveur Gitlab).
+\end{itemize}
+
+\vspace{5mm}
+
+Voici quelques commandes qui vous seront utiles pour mener à bien le versionning de votre projet :
+
+\vspace{3mm}
+% TODO : vérifier la commande merge
+\textbf{Gestion des branches :}
+\begin{lstlisting}[style=custombash]
+ // Liste toutes les branches disponibles
+ git branch
+ 
+ // Crée une nouvelle branche
+ git branch ma-branche
+
+ // Change de branche de développement
+ git checkout ma-branche
+	
+ // Création et changement de branche courante
+ git checkout -b ma-branche
+ 
+ // Supprime une branche
+ git branch -d ma-branche
+ 
+ // Depuis la branche `develop`, récupération des modifications de `ma-branche`
+ git merge ma-branche
+\end{lstlisting}
+
+\textbf{Ajout de modifications :}
+\begin{lstlisting}[style=custombash]
+ // Montre le status des fichiers versionnés ou non versionnés
+ git status
+
+ // Ajoute le fichier `file.txt` pour un prochain commit
+ git add file.txt
+
+ // Ajoute tous les fichiers pour un prochain commit
+ git add .
+
+ // Visualisation des différents commits de la branche courante
+ git log --oneline
+\end{lstlisting}
+ 
+\textbf{Intéraction avec le serveur d'hébergement :}
+\begin{lstlisting}[style=custombash]
+ // Crée un commit avec les fichiers `ajoutés`
+ git commit -m "mon premier commit"
+
+ // Énumère les serveurs d'hébergements référencés
+ git remote -v
+
+ // Publie les modifications apportés par une branche sur un serveur
+ git push origin ma-branche
+
+ // Récupère les modifications sur le serveur d'hébergement
+ git pull origin ma-branche
+\end{lstlisting}
+
+\subsection{Premier commit}
+
+Depuis la branche `develop`, créer un fichier `\textbf{.gitignore}` qui permet de ne pas tracker des fichiers jugés inutiles ou potentiellement sources d'erreurs et de conflits (fichiers binaires compilés).
+
+\vspace{5mm}
+Ajouter le contenu suivant dans ce nouveau fichier :
+
+\begin{lstlisting}[style=custombash]
+ .idea
+ target
+ *.class
+\end{lstlisting}
+
+Ajouter l'ensemble des modifications du projet puis créer votre premier commit.
+
+
+\subsection{Synchronisation avec Gitlab}
+
+Depuis Gitlab, créer un nouveau projet que vous nommerez \texttt{TP1-Agility}. Dans le terminal de votre projet, renseigner l'url de la remote comme étant l'origine :
+
+\begin{lstlisting}[style=custombash]
+ git remote add origin git@gitlab.com:XXXXXX/tp1-agility.git
+\end{lstlisting}
+
+\vspace{5mm}
+Vous pouvez maintenant soumettre vos modifications sur le serveur et vérifier qu'elles sont bien apparentes dans votre projet du serveur Gitlab.
+
+
+\section{Configuration du projet}
+
+\textbf{Note :} créer ici une branche de développement nommée `\texttt{feature/Configuration}`.
+
+\subsection{Installation de dépendances}
+
+Nous allons utiliser le framwork JUnit afin de tester le serveur d'API \href{https://fr.wikipedia.org/wiki/Representational_state_transfer}{REST} qui sera fourni. Ce serveur d'API REST permettra de restituer du contenu rapidement au client (navigateur web). Au sein de votre fichier de configuration \textbf{pom.xml} de votre projet Maven. Ajouter les dépendances et propriétés suivantes :
+%\begin{itemize}
+%	\item \href{https://repo1.maven.org/maven2/com/sparkjava/spark-core/2.9.1/spark-core-2.9.1.jar}{spark-java (2.9.1)}
+%	\item \href{https://repo1.maven.org/maven2/org/slf4j/slf4j-simple/1.7.21/slf4j-simple-1.7.21.jar}{slf4j-simple (1.7.21)}
+%\end{itemize}
+
+
+\begin{lstlisting}[style=customXML]
+<project>
+	...
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+</project>
+\end{lstlisting}
+
+Vous pouvez télécharger l'ensemble des dépendances \texttt{Maven} en cliquant droit sur votre fichier : \texttt{pom.xml} > \texttt{Maven} > \texttt{Reload project}.
+
+\subsection{Vérification du fonctionnement du serveur d'API}
+
+\vspace{5mm}
+Afin de gagner en temps de développement, nous n'allons pas utiliser une base de données. Dans le cadre du TP, nous allons exploiter des données issues de l'API de la \href{https://api.nasa.gov/}{NASA}, plus précisemment l'API nommée APOD pour `\texttt{Astronomy Picture of the Day}`.
+
+\vspace{5mm}
+Télécharger le fichier \href{https://jeromebuisine.fr/sources/git-teaching/courses/2021-2022/M1-Agility/tp2/resources/nasa_apod.json}{nasa\_apod.json} composé de données extraites et pré-traitées de l'API de la NASA. Puis placer ce fichier à la racine de votre projet.
+
+Nous allons maintenant vérifier le bon fonctionnement du serveur d'API. Télécharger le fichier \textbf{jar}, \href{https://jeromebuisine.fr/sources/git-teaching/courses/2021-2022/M1-Agility/tp2/resources/api.jar}{api.jar} et le placer à la racine du projet.
+
+\vspace{5mm}
+
+Lancer le serveur d'API :
+\begin{lstlisting}[style=custombash]
+ java -jar api.jar
+\end{lstlisting}
+
+\vspace{5mm}
+Le serveur est accessible depuis \href{http://127.0.0.1:4567}{http://127.0.0.1:4567}. Il est composé de deux routes :
+
+\begin{itemize}
+	\item \textbf{\texttt{article/:date}} : retourne un article en fournissant sa date (voir fichier nasa\_apod.json).
+	\item \textbf{\texttt{news}} : retourne une liste des 5 derniers articles disponibles.
+\end{itemize}
+
+\vspace{5mm}
+Ajouter maintenant les modifications apportées en réalisant un nouveau commit. Fusionner la branche `\texttt{feature/Configuration}` dans `\texttt{develop}`, supprimer la branche `\texttt{feature/Configuration}` puis mettre à jour le serveur d'hébergement.
+
+
+\subsection{Tests unitaires}
+
+\textbf{Note :} créer ici une branche de développement nommée `\texttt{feature/UnitTests}`.
+
+\vspace{5mm}
+
+Nous allons maintenant intégrer les tests unitaires au sein du projet. Pour cela, il vous faut ajouter les dépendances suivantes au sein de votre fichier \textbf{pom.xml} Celle du framework de Test unitaires JUnit et celle de la librairie Gson pour le traitement des réponses de l'API.
+
+
+\begin{lstlisting}[style=customXML]
+<project>
+	...
+	
+	<dependencies>
+		...		
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>1.3.2</version>
+		</dependency>
+		
+        <dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.7</version>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
+</project>
+\end{lstlisting}
+
+\vspace{5mm}
+Mettre à jour le projet pour télécharger la nouvelle dépendance puis créer la classe `\texttt{ServiceTest}` dans le dossier \textbf{\texttt{src/test/java/services}}. 
+
+%\vspace{5mm}
+%Étant donné que l'on utilise un serveur proposant une API, il nous faut pouvoir lancer ce serveur afin de pouvoir vérifier le retour de chacune de ces routes au sein de nos tests unitaires. Dans le cadre du TP, les développements relatifs à cette procédure vous sont directement fournit :
+%
+%% TODO : ajouter les liens des classes en question
+%\begin{itemize}
+%	\item La classe `\href{https://jeromebuisine.fr/sources/teaching/2020-2021/M1/Agility/TP1/ApiCall.java}{\texttt{ApiCall}}` qui va vous permettre de simuler l'appel à une route du serveur d'API Spark et récupérer la réponse de cet appel (classe à ajouter dans \textbf{\texttt{src/test/java/services}}).
+%	\item Le code de base de la classe `\href{https://jeromebuisine.fr/sources/teaching/2020-2021/M1/Agility/TP1/ServiceTest.java}{\texttt{ServiceTest}}` qui comprend le lancement du serveur, un test d'exemple réalisant l'appel au serveur et la méthode permettant l'arrêt du serveur une fois le test réalisé.
+%\end{itemize}
+
+\vspace{5mm}
+Dans la classe `\texttt{ServiceTest}` en vous basant sur la documentation de JUnit, écrire les tests unitaires suivants vérifiant :
+
+\begin{itemize}
+	\item que la route `\texttt{article/2020-06-03}` retourne bien un JSON comprenant l'article dont le titre est `\textit{The Dance of Venus and Earth}`.
+	\item que la route `\texttt{news}` retourne bien un JSON comprenant 5 articles.
+\end{itemize}
+
+\vspace{5mm}
+\textbf{Notes :} la librairie Gson, permet de convertir un flux JSON en une une instance de classe. N'hésitez pas à créer une classe `\texttt{Article}` (dites \href{https://fr.wikipedia.org/wiki/Plain_old_Java_object}{POJO}) stockant chacune des informations d'un article en ne gardant que les champs principaux (title, explanation, date, url).
+
+\vspace{5mm}
+Vous pouvez vous aider également de l'exemple ci-dessous pour réaliser un appel vers un service extérieur depuis votre test unitaire :
+
+\begin{lstlisting}[style=customJava]
+ // Exécution de la requête
+ URL url = new URL("http://localhost:4567/maRoute");
+ HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+ connection.setRequestMethod("GET");
+ connection.setDoOutput(true);
+ connection.connect();
+
+ // récupération de la réponse
+ String body = IOUtils.toString(connection.getInputStream());
+
+ // Traitement de la réponse
+ Gson gson = new Gson();
+ MaClasse object = gson.fromJson(body, MaClasse.class);
+ 
+ // Votre test
+ assertEquals(42, object.getId());
+\end{lstlisting}
+
+
+\vspace{5mm}
+Une fois que le passage des tests unitaires est validé, n'hésitez pas à créer un simple commit au sein de la feature `\texttt{feature/UnitTests}` pour valider cette étape.
+
+\vspace{5mm}
+\textbf{Note :} il est important lors de l'exécution de la classe `\texttt{ServiceTest}` d'avoir exécuté au préalable le serveur d'API Spark.
+
+\subsection{Intégration continue}
+
+Nous allons maintenant intégrer la vérification du passage des tests unitaires à chaque nouvelle mise à jour soumise au serveur Gitlab sur certaines branches.
+
+\vspace{5mm}
+Pour que Gitlab puisse télécharger les dépendances du projet utiles au lancement des tests unitaires, il vous faut ajouter le répertoire de dépendances Maven ciblé dans le fichier \textbf{pom.xml} :
+\begin{lstlisting}[style=customXML]
+<project>
+	...
+
+	<dependencies>
+	...		
+	</dependencies>
+	
+	<distributionManagement>
+		<repository>
+			<id>central</id>
+			<name>83d43b5afeb5-releases</name>
+			<url>${env.MAVEN_REPO_URL}/libs-release-local</url>
+		</repository>
+	</distributionManagement>
+</project>
+\end{lstlisting}
+
+\vspace{5mm}
+Gitlab a également besoin de s'identifier sur le répertoire de dépendances distant. À cet effet, créer le dossier \textbf{\texttt{.m2}} à la racine du projet et y ajouter le fichier `\texttt{settings.xml}` avec le contenu suivant :
+\begin{lstlisting}[style=customXML]
+<settings xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd" xmlns="http://maven.apache.org/SETTINGS/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<servers>
+		<server>
+			<id>central</id>
+			<username>${env.MAVEN_REPO_USER}</username>
+			<password>${env.MAVEN_REPO_PASS}</password>
+		</server>
+	</servers>
+</settings>
+\end{lstlisting}
+
+\vspace{5mm}
+Gitlab se base sur un fichier nommé `\textbf{\texttt{.gitlab-ci.yml}}` pour interpréter les opérations d'intégration continues souhaité. Dans l'exemple ci-dessous, qui sera utilisé pour le projet, nous définissons plusieurs choses :
+
+\begin{itemize}
+	\item `\texttt{image}` : nous utilisons directement une image \href{https://www.docker.com/}{Docker} propre à Maven (où Maven est déjà installé).
+	\item `\texttt{stages}` les différents jobs que nous définissons dans notre pipeline d'intégration.
+	\item `\texttt{variables}` : variables d'environnements utiles à l'image et ici propres à Maven.
+	\item `\texttt{build}` : la phase de construction du projet correspondant au job (stage) `build`.
+	\item `\texttt{test}` : la phase de lancement des tests unitaires du projet correspondant au job (stage) `test`. Avec ici les commandes permettant de lancer le serveur d'API puis d'attendre sa disponibilité avant de procéder aux tests unitaires.
+\end{itemize}
+
+\vspace{2mm}
+\begin{lstlisting}[style=customYML]
+ image: maven:3-openjdk-8
+
+ stages:
+ 	- build
+ 	- test
+
+ variables:
+ 	MAVEN_CLI_OPTS: "-s .m2/settings.xml --batch-mode"
+ 	MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
+
+ cache:
+ 	paths:
+ 		- .m2/repository/
+ 		- target/
+
+ build:
+	 stage: build
+	 script:
+		 - mvn $MAVEN_CLI_OPTS compile
+
+ test:
+	 stage: test
+	 script:
+		 - apt update
+		 - apt install -y netcat
+	     - java -jar api.jar &
+	     - echo "Waiting api to launch on 4567..."
+	     - while ! nc -z localhost 4567; do sleep 1; done
+	     - mvn $MAVEN_CLI_OPTS test
+\end{lstlisting}
+
+
+\vspace{5mm}
+
+Ajouter le fichier à la racine de votre projet. Réaliser un commit avant de procéder la fusion de la branche de développement des tests unitaires (`\texttt{feature/UnitTests}`) dans la branche `\texttt{develop}`. Puis mettre à jour la branche develop sur le serveur Gitlab.
+
+\vspace{2mm}
+Sur l'interface Gitlab de votre projet, il vous est possible d'accéder à l'onglet `CI/CD` relatif à l'intégration continue. Vous pouvez vérifier que les différents jobs de la pipeline ont été exécutés correctement.
+
+\vspace{2mm}
+\textbf{Note :} la configuration de la `CI/CD` est ici assez minimale. La \href{https://docs.gitlab.com/ee/ci/}{documentation} offre beaucoup de paramètres intéressants, notammment la possibilité d'associer un job à une ou plusieurs branches spécifiques. Cela permet notammennt de séparer les différents environnements de développements et déploiements.
+
+\section{Mesure de qualité du code}
+
+Dans cette partie du TP, nous allons procéder à la configuration de votre projet sur un serveur SonarQube, permettant de mesurer la qualité de code d'un projet mais aussi de mettre en place des règles de convention de codage relatives au projet. 
+
+%\subsection{Installation du SonarQube}
+%
+%Docker sera utilisé pour simplifier l'installation de SonarQube indépendamment du système d'exploitation. Si vous ne possèdez pas encore Docker, il vous suffit de suivre la \href{https://docs.docker.com/get-docker/}{procédure} d'installation suivant votre système.
+%
+%\vspace{2mm}
+%Il est possible de récupérer directement l'image officielle de SonarQube et de lancer une instance : 
+%
+%\begin{lstlisting}[style=custombash]
+% docker pull sonarqube
+% docker run --name sonarqube -p 9000:9000 sonarqube
+%\end{lstlisting}
+%
+%Une fois l'instance lancée, le serveur est accessible à l'adresse \href{http://127.0.0.1:9000}{http://127.0.0.1:9000}. L'utilisateur administrateur par défaut n'est autre que `\texttt{admin}` et son mot de passe `\texttt{admin}`...
+%
+%\vspace{5mm}
+%Dans un premier temps, depuis le Marketplace, installer l'outil \textbf{PMD} permettant d'avoir plus de métriques issues de projets.
+
+\subsection{Configuration du projet}
+
+SonarQube va vous permettre de configurer votre projet et d'intéragir avec Gitlab. Un \href{https://docs.google.com/spreadsheets/d/1n4Ui0-kKvXZbSVeffCLunpR92ZkUwUOFmNYWVU5p8TI/edit?usp=sharing}{fichier} est disponible pour choisir un serveur SonarQube parmi deux instances disponibles. L'idée est de vous répartir au mieux au sein des deux serveurs pour équilibrer les charges. Une fois le nom ajouté, merci de notifier le professeur afin qu'il puisse créer votre compte si cela n'est pas déjà le cas. À noter que l'outil PMD, incluant des mesures supplémentaires, est déjà intégré dans le serveur. Un compte vous a été créé sur ce serveur dont l'identifiant est composé de la manière suivante : Jean DUPONT => jdupont. Le mot de passe par défaut sera `azerty`.
+
+\vspace{5mm}
+Accéder aux paramètres de sécurité de votre compte et générer un token d'identification nommé `gitlab` par exemple (ce token permettra à la pipeline gitlab de s'identifier sur le serveur sonar pour réalisation de rapports de votre projet) :
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\textwidth]{resources/images/sonarqube-token.png}
+\end{figure}
+
+
+
+\vspace{15mm}
+Créer ensuite un projet avec les informations suivantes :
+\begin{itemize}
+	\item `\texttt{project key}` : tp1-agility-xxxxxx
+	\item `\texttt{display name}` : tp1-agility-xxxxxx
+\end{itemize}
+
+où \texttt{xxxxxx}, est votre nom de compte du serveur sonarqube.
+
+\vspace{5mm}
+Il vous faut ajouter votre token précédemment généré et préciser que le projet est un projet \textbf{Java} et \textbf{Maven}. Vous aurez ainsi accès à la commande permettant de générer un rapport de qualité de code sur votre projet. 
+
+\vspace{5mm}
+Dans notre cas, nous allons directement configurer un nouveau job à notre pipeline CI/CD de Gitlab (avec les variables SONAR associées), comme présenté ci-dessous :
+
+\begin{lstlisting}[style=custombash]
+ ...
+ stages:
+	- build
+	- test
+	- sonarqube
+ ...
+ variables:
+ 	...
+	SONAR_TOKEN: "your-sonarqube-token"
+	SONAR_HOST_URL: "http://51.254.210.97:9000"
+ ...
+ sonarqube:
+	stage: sonarqube
+	script:
+		- mvn sonar:sonar -Dsonar.qualitygate.wait=true
+	allow_failure: true
+	only:
+		- merge_requests
+		- develop
+		- master
+\end{lstlisting}
+
+Analyser le rapport généré puis explorer l'outil et les règles utilisées pour votre projet.
+
+\vspace{5mm}
+Enfin, réaliser une livraison du projet sur la branche `\texttt{master}` en récupérant l'ensemble des modifications de la branche `\texttt{develop}` \textbf{sans la supprimer}. Vérifier que la pipeline Gitlab a bien été exécutée et consulter le rapport Sonar.
+
+\section{Développement côté client}
+
+\textbf{Note :} créer ici une branche de développement nommée `\texttt{feature/DevWeb}`.
+
+\subsection{Partie 1 :}
+
+Vous pouvez utiliser la route suivante :
+
+\begin{itemize}
+	\item \textbf{\texttt{articles/:keyword}} : retourne une liste d'articles en fonction d'un mot clé.
+\end{itemize}
+
+De ce fait, il vous faudra ajouter de nouveau un test unitaire de cette route comme fait précedemment. Cela-ci va vérifier que le mot clé \texttt{Earth} est présent retourne 2 articles.
+
+\subsection{Partie 2 :}
+
+Vous avez créé un pipeline d'intégration continue assez complet. L'idée était de pouvoir configurer cet outil pour les prochains TPs. Dans cette seconde partie, on vous propose d'exploiter seul la possibilité de générer un site web statique et de le publier automatiquement.
+
+\vspace{2mm}
+Gitlab propose l'hébergement de site web statique. Vous allez donc générer votre propre site web qui se mettra à jour automatiquement lorsque vous allez y ajouter des modifications.
+
+\vspace{2mm}
+Voici les différents outils proposés pour la génération de votre propose site web :
+
+\begin{itemize}
+	\item Un tutoriel simplifié de \href{https://getpublii.com/docs/host-static-website-gitlab-pages.html}{Gitlab Pages} ;
+	\item La documentation officielle de \href{https://docs.gitlab.com/ee/user/project/pages/}{Gitlab pages} ;
+	\item Une proposition de framework permettant de configurer un site web avec fichier `Mardown' : \href{https://gohugo.io/documentation/}{gohugo}.
+\end{itemize}
+
+%\textbf{Note :} \href{https://github.com}{Github} est un outil semblable à Gitlab mais où une plus forte communauté existe. Vous pouvez, si vous le souhaitez utiliser davantage cet outil pour créer votre propre projet site web : \href{https://pages.github.com/}{Github pages}.
+
+\vspace{2mm}
+Le processus de configuration reste le même :
+
+\begin{itemize}
+	\item Création de votre projet web sous Gitlab ;
+	\item Génération de votre contenu web dans un dossier (non tracké, donc dans le fichier `.gitignore`) `public`. Pour les premiers essaies, il vous sera proposé de créer simplement un fichier `index.html` comprenant `Hello world` : \texttt{echo "Hello World" > index.html} ;
+	\item Configuration de votre fichier de configuration d'intégration continue ;
+	\item Utiliser un générateur de site web statique comme \href{https://gohugo.io/documentation/}{gohugo} pour générer un contenu rapidement où l'on s'abstient du développement web ;
+	\item Mettre à jour votre fichier d'intégration continue, pour qu'il génère automatiquement le nouveau contenu de votre site web dans le dossier `public`.
+\end{itemize}
+
+
+\textbf{Note :} la difficulté de ce TP réside dans la configuration basique de votre fichier CI pour l'adapter à l'utilisation de \href{https://gohugo.io/documentation/}{gohugo}. Mais une fois configuré, vous pouvez compléter votre si web à souhait et créer votre propre portefolio.
+%\textbf{Note :} il est également possible de réaliser la même chose pour la plateforme \href{https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site}{Github} si vous avez une préférence. Toutefois, la configuration est un peu différente.
+
+\end{document}
