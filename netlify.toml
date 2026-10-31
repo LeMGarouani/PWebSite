@@ -2,6 +2,16 @@
   publish = "public"
   functions = "functions"
 
+[[redirects]]
+  from = "/publications-orcid"
+  to = "/publications/"
+  status = 301
+
+[[redirects]]
+  from = "/publications-hal"
+  to = "/publications/"
+  status = 301
+
 [build.environment]
   NPM_VERSION = "8.5.5"
   NODE_VERSION= "22"

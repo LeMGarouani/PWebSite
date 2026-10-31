@@ -54,10 +54,10 @@ lqipWidth = "20x"
 smallLimit = "300"
 
 # Footer
-footer = "Copyright © 2025 Moncef GAROUANI"
+footer = "Copyright © <span data-copyright-year>{year}</span> Moncef GAROUANI"
 
 # Feed
-copyRight = "Copyright © 2025 Moncef GAROUANI"
+copyRight = "Copyright © Moncef GAROUANI"
 
 # Alert
 alert = false

@@ -14,6 +14,7 @@
     "access": "public"
   },
   "scripts": {
+    "preview:publications": "node scripts/preview-publications.js",
     "init": "shx rm -rf .git && git init -b main",
     "create": "exec-bin node_modules/.bin/hugo/hugo new",
     "prestart": "npm run clean",
@@ -29,7 +30,9 @@
     "lint:markdown": "markdownlint-cli2 \"*.md\" \"content/**/*.md\"",
     "lint:markdown-fix": "markdownlint-cli2-fix \"*.md\" \"content/**/*.md\"",
     "server": "exec-bin node_modules/.bin/hugo/hugo server",
-    "test": "npm run -s lint",
+    "test": "npm run test:unit && npm run -s lint",
+    "test:unit": "node --test scripts/hal-publications.test.js",
+    "test:production": "npm run build && node --test scripts/publications-production.test.js",
     "env": "env",
     "precheck": "npm version",
     "check": "exec-bin node_modules/.bin/hugo/hugo version",
