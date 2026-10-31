@@ -1,0 +1,17 @@
+{{ define "main" }}
+<div class="row justify-content-center">
+  <div class="col-md-12 col-lg-10 col-xl-10">
+    <article>
+      <h1 class="text-center">{{ .Title }}</h1>
+      <div data-hal-publications class="hal-publications">
+        <p data-hal-status role="status" aria-live="polite">Loading publications...</p>
+        <button data-hal-retry class="btn btn-outline-primary mb-3" type="button" hidden>Retry</button>
+        <div data-hal-list></div>
+      </div>
+      <noscript>Enable JavaScript to load publications, or visit <a href="https://hal.science/search/index/?q=authIdHal_i:744405">HAL</a>.</noscript>
+    </article>
+  </div>
+</div>
+{{ $script := resources.Get "js/hal-publications.js" | minify | fingerprint "sha512" }}
+<script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous" defer></script>
+{{ end }}
