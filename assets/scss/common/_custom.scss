@@ -127,3 +127,59 @@ body {
   margin-top: 10px;
   flex-shrink: 0;
 }
+
+.hal-publications {
+  --hal-text: #263238;
+  --hal-author: #633093;
+
+  .accordion-button {
+    display: flex;
+    width: 100%;
+    gap: 0.75rem;
+    text-align: left;
+  }
+
+  .accordion-button .badge {
+    flex-shrink: 0;
+    min-width: 2.5em;
+    margin-left: auto;
+  }
+
+  .accordion-button::after {
+    margin-left: 0;
+  }
+
+  .card-body {
+    padding: 1.25rem;
+    overflow-wrap: anywhere;
+  }
+
+  .card-body h2 {
+    margin: 0 0 0.75rem;
+    line-height: 1.4;
+  }
+
+  .card-body p {
+    color: var(--hal-text);
+    margin: 0 0 0.75rem;
+    line-height: 1.65;
+  }
+
+  .card-body p:last-child {
+    margin-bottom: 0;
+  }
+
+  .card-body .hal-author {
+    color: var(--hal-author);
+  }
+
+  .card-body a.hal-author {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+}
+
+[data-dark-mode] .hal-publications {
+  --hal-text: #dee2e6;
+  --hal-author: #d6b4fc;
+}
