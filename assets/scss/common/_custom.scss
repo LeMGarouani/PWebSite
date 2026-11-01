@@ -127,3 +127,299 @@ body {
   margin-top: 10px;
   flex-shrink: 0;
 }
+
+.hal-publications {
+  --hal-text: #263238;
+  --hal-author: #633093;
+
+  .hal-notice {
+    margin: 1.5rem 0;
+  }
+
+  .hal-notice-saved {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    color: var(--hal-text);
+    background: rgba(99, 48, 147, 0.05);
+    border: 1px solid rgba(99, 48, 147, 0.15);
+    border-left: 3px solid var(--hal-author);
+    border-radius: 0.5rem;
+  }
+
+  .hal-notice-saved [data-hal-status] {
+    flex: 1 1 16rem;
+    min-width: 0;
+  }
+
+  .hal-notice-title,
+  .hal-notice-detail {
+    display: block;
+    line-height: 1.6;
+  }
+
+  .hal-notice-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+
+  .hal-notice-detail {
+    margin-top: 0.25rem;
+    font-size: 0.85rem;
+  }
+
+  .hal-notice[hidden] {
+    display: none;
+  }
+
+  .hal-retry.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+    color: var(--hal-author);
+    border-color: rgba(99, 48, 147, 0.25);
+    background: rgba(99, 48, 147, 0.04);
+    border-radius: 2rem;
+    padding: 0.6rem 1rem;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  .hal-retry[hidden] {
+    display: none;
+  }
+
+  .hal-retry.btn:hover,
+  .hal-retry.btn:focus-visible {
+    color: var(--hal-author);
+    border-color: var(--hal-author);
+    background: rgba(99, 48, 147, 0.1);
+  }
+
+  .hal-retry:focus-visible {
+    outline: 2px solid var(--hal-author);
+    outline-offset: 3px;
+    box-shadow: none;
+  }
+
+  .hal-retry-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  .hal-retry-links {
+    opacity: 0.3;
+  }
+
+  .hal-retry-nodes {
+    opacity: 0.7;
+  }
+
+  .hal-retry-core {
+    transform-origin: 16px 16px;
+  }
+
+  .hal-retry:hover .hal-retry-nodes,
+  .hal-retry:focus-visible .hal-retry-nodes {
+    animation: hal-retry-pulse 0.7s ease-in-out;
+  }
+
+  .hal-retry:hover .hal-retry-core,
+  .hal-retry:focus-visible .hal-retry-core {
+    animation: hal-retry-core 0.7s ease-in-out;
+  }
+
+  .hal-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+    color: var(--hal-text);
+    background: rgba(99, 48, 147, 0.05);
+    border: 1px solid rgba(99, 48, 147, 0.15);
+    border-radius: 0.75rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .hal-neural {
+    flex: 0 0 auto;
+    width: 5rem;
+    height: 5rem;
+    color: var(--hal-author);
+    fill: currentColor;
+  }
+
+  .hal-neural-links {
+    opacity: 0.18;
+    stroke-width: 0.8;
+  }
+
+  .hal-neural-signals path {
+    stroke-width: 1.8;
+    stroke-dasharray: 12 88;
+    animation: hal-neural-flow 2.8s linear infinite;
+  }
+
+  .hal-neural-signals path:nth-child(2) {
+    animation-delay: -0.9s;
+  }
+
+  .hal-neural-signals path:nth-child(3) {
+    animation-delay: -1.8s;
+  }
+
+  .hal-neural-nodes {
+    opacity: 0.65;
+  }
+
+  .hal-neural-halo {
+    transform-origin: 50px 50px;
+    animation: hal-neural-pulse 2.8s ease-out infinite;
+  }
+
+  .hal-neural-core {
+    fill: var(--hal-author);
+  }
+
+  .hal-neural-center {
+    fill: var(--hal-text);
+  }
+
+  .accordion-button {
+    display: flex;
+    width: 100%;
+    gap: 0.75rem;
+    text-align: left;
+  }
+
+  .accordion-button .badge {
+    background-color: var(--hal-author);
+    color: #fff;
+    flex-shrink: 0;
+    min-width: 2.5em;
+    margin-left: auto;
+  }
+
+  .accordion-button::after {
+    margin-left: 0;
+  }
+
+  .card-body {
+    padding: 1.25rem;
+    overflow-wrap: anywhere;
+  }
+
+  .card-body h2 {
+    margin: 0 0 0.75rem;
+    line-height: 1.4;
+  }
+
+  .card-body p {
+    color: var(--hal-text);
+    margin: 0 0 0.75rem;
+    line-height: 1.65;
+  }
+
+  .card-body p:last-child {
+    margin-bottom: 0;
+  }
+
+  .card-body .hal-author {
+    color: var(--hal-author);
+  }
+
+  .card-body a.hal-author {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+}
+
+[data-dark-mode] .hal-publications {
+  --hal-text: #dee2e6;
+  --hal-author: #{$blue-300};
+
+  .accordion-button .badge {
+    background-color: $info;
+  }
+
+  .hal-loading,
+  .hal-notice-saved {
+    background: rgba($blue-300, 0.06);
+    border-color: rgba($blue-300, 0.2);
+  }
+
+  .card-body .hal-author {
+    color: $blue-300;
+  }
+
+  .hal-retry.btn {
+    color: $blue-300;
+    background: rgba($blue-300, 0.06);
+    border-color: rgba($blue-300, 0.3);
+  }
+
+  .hal-retry.btn:hover,
+  .hal-retry.btn:focus-visible {
+    color: $blue-300;
+    background: rgba($blue-300, 0.12);
+    border-color: $blue-300;
+  }
+
+  .hal-retry.btn:focus-visible {
+    outline-color: $blue-300;
+  }
+
+}
+
+@keyframes hal-neural-flow {
+  to {
+    stroke-dashoffset: -100;
+  }
+}
+
+@keyframes hal-neural-pulse {
+  from {
+    transform: scale(0.65);
+    opacity: 0.25;
+  }
+
+  to {
+    transform: scale(1.7);
+    opacity: 0;
+  }
+}
+
+@keyframes hal-retry-pulse {
+  50% {
+    opacity: 0.35;
+  }
+}
+
+@keyframes hal-retry-core {
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hal-publications .hal-retry:hover .hal-retry-core,
+  .hal-publications .hal-retry:focus-visible .hal-retry-core,
+  .hal-publications .hal-retry:hover .hal-retry-nodes,
+  .hal-publications .hal-retry:focus-visible .hal-retry-nodes,
+  .hal-publications .hal-neural-signals path,
+  .hal-publications .hal-neural-halo {
+    animation: none;
+  }
+
+  .hal-publications .hal-neural-halo {
+    opacity: 0.12;
+  }
+}

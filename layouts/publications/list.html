@@ -3,185 +3,55 @@
   <div class="col-md-12 col-lg-10 col-xl-10">
     <article>
       <h1 class="text-center">{{ .Title }}</h1>
-      <div class="text-center">{{ .Content }}</div>
-
-	  
-		<div class="accordion-item">
-		  <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
-				<b>Articles 📖</b>
-				<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info ">10<span class="visually-hidden"></span>
-			</button>
-		  </h2>
-		  <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-			<div  class="card-list"  >
-				{{ range $index, $publication := (.Data.Pages) }}
-					{{ if eq .Params.category 1 }}
-					<div class="card" style="margin-bottom: 5px;">
-						<div class="card-body">
-							<h2 class="h5"><a class="stretched-link text-body" href="{{ .RelPermalink }}">{{ .Params.title }}</a></h2>
-							{{ partial "main/publication-meta.html" . -}}
-						</div>
-					</div>
-					{{ end }}
-				{{ end -}}
-			</div>
-		  </div>
-
-		  
-
-
-		</div>
-		<div class="accordion-item">
-		  <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-				<b>Conferences 📝 </b>
-				<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info ">19<span class="visually-hidden"></span>
-			</button>
-		  </h2>
-		  <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-			<div id="collapseTwo" class="card-list" data-bs-parent="#accordion">
-				{{ range $index, $publication := (.Data.Pages) }}
-					{{ if eq .Params.category 2 }}
-					<div class="card" style="margin-bottom: 5px;">
-						<div class="card-body">
-							<h2 class="h5"><a class="stretched-link text-body" href="{{ .RelPermalink }}">{{ .Params.title }}</a></h2>
-							{{ partial "main/publication-meta.html" . -}}
-						</div>
-					</div>
-					{{ end }}
-				{{ end -}}
-			</div>
-		  </div>
-		</div>
-		<div class="accordion-item">
-		  <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-				<b>Softwares 💻 </b>
-				<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info ">2<span class="visually-hidden"></span>
-			</button>
-		  </h2>
-		  <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-			<div id="collapseTwo" class="card-list" data-bs-parent="#accordion">
-				{{ range $index, $publication := (.Data.Pages) }}
-					{{ if eq .Params.category 3 }}
-					<div class="card" style="margin-bottom: 5px;">
-						<div class="card-body">
-							<h2 class="h5"><a class="stretched-link text-body" href="{{ .RelPermalink }}">{{ .Params.title }}</a></h2>
-							{{ partial "main/publication-meta.html" . -}}
-						</div>
-					</div>
-					{{ end }}
-				{{ end -}}
-			</div>
-		  </div>
-		</div>
- 	  
-
-		<div class="accordion-item">
-			<h2 class="accordion-header" id="panelsStayOpen-headingFour">
-			  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-				  <b>Posters 📒 </b>
-				  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info ">3<span class="visually-hidden"></span>
-			  </button>
-			</h2>
-			<div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
-			  <div id="collapseTwo" class="card-list" data-bs-parent="#accordion">
-				  {{ range $index, $publication := (.Data.Pages) }}
-					  {{ if eq .Params.category 4 }}
-					  <div class="card" style="margin-bottom: 5px;">
-						  <div class="card-body">
-							  <h2 class="h5"><a class="stretched-link text-body" href="{{ .RelPermalink }}">{{ .Params.title }}</a></h2>
-							  {{ partial "main/publication-meta.html" . -}}
-						  </div>
-					  </div>
-					  {{ end }}
-				  {{ end -}}
-			  </div>
-			</div>
-		  </div>
-
-
-		  <div class="accordion-item">
-			<h2 class="accordion-header" id="panelsStayOpen-headingfive">
-			  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsefive" aria-expanded="false" aria-controls="panelsStayOpen-collapsefive">
-				  <b>Theses 📓 </b>
-				  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info ">3<span class="visually-hidden"></span>
-			  </button>
-			</h2>
-			<div id="panelsStayOpen-collapsefive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingfive">
-			  <div id="collapseTwo" class="card-list" data-bs-parent="#accordion">
-				  {{ range $index, $publication := (.Data.Pages) }}
-					  {{ if eq .Params.category 5 }}
-					  <div class="card" style="margin-bottom: 5px;">
-						  <div class="card-body">
-							  <h2 class="h5"><a class="stretched-link text-body" href="{{ .RelPermalink }}">{{ .Params.title }}</a></h2>
-							  {{ partial "main/publication-meta.html" . -}}
-						  </div>
-					  </div>
-					  {{ end }}
-				  {{ end -}}
-			  </div>
-			</div>
-		  </div>
-
-   		 
- 	  
-
-<!--
- 			<h3>Articles 📖</h3>
-			<div id="articles" class="card-list">
-				{{ range $index, $publication := (.Data.Pages) }}
-					{{ if eq .Params.category 1 }}
-					<div id="articles" class="card collapse" style="margin-bottom: 5px;">
-						<div class="card-body">
-							<h2 class="h5"><a class="stretched-link text-body" href="{{ .RelPermalink }}">{{ .Params.title }}</a></h2>
-							{{ partial "main/publication-meta.html" . -}}
-						</div>
-					</div>
-					{{ end }}
-				{{ end -}}
-			</div>
-			<h3>Conferences 📝</h3>
-			<div class="card-list">
-				{{ range $index, $publication := (.Data.Pages) }}
-					{{ if eq .Params.category 2 }}
-					<div class="card" style="margin-bottom: 5px;">
-						<div class="card-body">
-							<h2 class="h5"><a class="stretched-link text-body" href="{{ .RelPermalink }}">{{ .Params.title }}</a></h2>
-							{{ partial "main/publication-meta.html" . -}}
-						</div>
-					</div>
-					{{ end }}
-				{{ end -}}
-			</div>
-			<h3>Softwares 💻</h3>
-			<div class="card-list">
-				{{ range $index, $publication := (.Data.Pages) }}
-					{{ if eq .Params.category 3 }}
-					<div class="card" style="margin-bottom: 5px;">
-						<div class="card-body">
-							<h2 class="h5"><a class="stretched-link text-body" href="{{ .RelPermalink }}">{{ .Params.title }}</a></h2>
-							{{ partial "main/publication-meta.html" . -}}
-						</div>
-					</div>
-					{{ end }}
-				{{ end -}}
-			</div>
-			<h3>Posters 📒</h3>
-			<div class="card-list">
-				{{ range $index, $publication := (.Data.Pages) }}
-					{{ if eq .Params.category 4 }}
-					<div class="card" style="margin-bottom: 5px;">
-						<div class="card-body">
-							<h2 class="h5"><a class="stretched-link text-body" href="{{ .RelPermalink }}">{{ .Params.title }}</a></h2>
-							{{ partial "main/publication-meta.html" . -}}
-						</div>
-					</div>
-					{{ end }}
-				{{ end -}}
-			</div>-->
+      <div data-hal-publications class="hal-publications">
+        <div data-hal-notice class="hal-notice" hidden>
+          <div data-hal-status class="hal-loading" role="status" aria-live="polite">Loading publications from HAL.sciences</div>
+          <button data-hal-retry class="btn btn-outline-primary btn-sm hal-retry" type="button" hidden>
+            <svg class="hal-retry-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+              <g class="hal-retry-links" fill="none" stroke="currentColor" stroke-width="0.8" stroke-linejoin="round">
+                <path d="m16 3 11 7v12l-11 7-11-7V10Zm0 0v26M5 10l22 12M5 22l22-12M16 3 5 22h22Z"/>
+              </g>
+              <g class="hal-retry-nodes" fill="currentColor">
+                <circle cx="16" cy="3" r="1.5"/><circle cx="27" cy="10" r="1.5"/>
+                <circle cx="27" cy="22" r="1.5"/><circle cx="16" cy="29" r="1.5"/>
+                <circle cx="5" cy="22" r="1.5"/><circle cx="5" cy="10" r="1.5"/>
+              </g>
+              <path class="hal-retry-core" fill="currentColor" d="m16 11 5 5-5 5-5-5Z"/>
+            </svg>
+            <span>Retry</span>
+          </button>
+        </div>
+        <div data-hal-list></div>
+        <template data-hal-loader>
+          <svg class="hal-neural" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+            <g class="hal-neural-links" fill="none" stroke="currentColor">
+              <circle cx="50" cy="50" r="37"/>
+              <path d="M50 13 82 32 82 68 50 87 18 68 18 32ZM50 13 82 68 18 32 50 87 82 32 18 68Z"/>
+              <path d="M50 13V87M18 32 82 68M18 68 82 32"/>
+            </g>
+            <g class="hal-neural-signals" fill="none" stroke="currentColor" stroke-linecap="round">
+              <path pathLength="100" d="M50 13 50 50 82 68"/>
+              <path pathLength="100" d="M18 68 50 50 82 32"/>
+              <path pathLength="100" d="M18 32 50 50 50 87"/>
+            </g>
+            <g class="hal-neural-nodes">
+              <circle cx="50" cy="13" r="3"/><circle cx="82" cy="32" r="3"/>
+              <circle cx="82" cy="68" r="3"/><circle cx="50" cy="87" r="3"/>
+              <circle cx="18" cy="68" r="3"/><circle cx="18" cy="32" r="3"/>
+            </g>
+            <circle class="hal-neural-halo" cx="50" cy="50" r="13"/>
+            <g class="hal-neural-core">
+              <path d="m50 41 9 9-9 9-9-9Z"/>
+              <circle cx="50" cy="50" r="2" class="hal-neural-center"/>
+            </g>
+          </svg>
+          <span>Loading publications from HAL.sciences</span>
+        </template>
+      </div>
+      <noscript>Enable JavaScript to load publications, or visit <a href="https://hal.science/search/index/?q=authIdHal_i:744405">HAL</a>.</noscript>
     </article>
   </div>
 </div>
+{{ $script := resources.Get "js/hal-publications.js" | minify | fingerprint "sha512" }}
+<script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous" defer></script>
 {{ end }}

@@ -11,6 +11,7 @@ module.exports = {
         './node_modules/@hyas/doks/content/**/*.md',
         './layouts/**/*.html',
         './content/**/*.md',
+        './assets/js/**/*.js',
       ],
       safelist: [
         'lazyloaded',
