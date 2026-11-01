@@ -16,7 +16,11 @@ const server = http.createServer(async (request, response) => {
     return;
   }
   if (request.url.split('?')[0] === '/.netlify/functions/hal-publications') {
+<<<<<<< HEAD
     const result = await halHandler({ httpMethod: request.method, localPreview: true });
+=======
+    const result = await halHandler({ httpMethod: request.method });
+>>>>>>> f1c4bd721bfb9544d6f8cc4979055ca026ec8dd1
     response.writeHead(result.statusCode, result.headers);
     response.end(result.body);
     return;

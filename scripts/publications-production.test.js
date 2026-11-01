@@ -12,21 +12,30 @@ test('production CSS preserves runtime publication styling and accordion behavio
   assert.ok(stylesheet, 'Production stylesheet must be linked from the publications page');
   const css = fs.readFileSync(path.join(__dirname, '../public', stylesheet), 'utf8');
   const rules = new Map();
+<<<<<<< HEAD
   const root = postcss.parse(css);
   root.walkRules(rule => {
     for (const selector of rule.selectors) {
       if (!rules.has(selector)) rules.set(selector, []);
       rules.get(selector).push(rule);
     }
+=======
+  postcss.parse(css).walkRules(rule => {
+    for (const selector of rule.selectors) rules.set(selector, rule);
+>>>>>>> f1c4bd721bfb9544d6f8cc4979055ca026ec8dd1
   });
   const required = [
     ['.hal-publications .accordion-button', 'display', 'flex'],
     ['.hal-publications .accordion-button .badge', 'min-width', '2.5em'],
+<<<<<<< HEAD
     ['.hal-publications .accordion-button .badge', 'background-color', 'var(--hal-author)'],
+=======
+>>>>>>> f1c4bd721bfb9544d6f8cc4979055ca026ec8dd1
     ['.hal-publications .accordion-button::after', 'margin-left', '0'],
     ['.hal-publications .card-body .hal-author', 'color', 'var(--hal-author)'],
     ['.hal-publications .card-body p', 'color', 'var(--hal-text)'],
     ['.collapse:not(.show)', 'display', 'none'],
+<<<<<<< HEAD
     ['.hal-publications .hal-neural', 'width', '5rem'],
     ['.hal-publications .hal-loading', 'flex-direction', 'column'],
     ['.hal-publications .hal-loading', 'text-align', 'center'],
@@ -37,10 +46,13 @@ test('production CSS preserves runtime publication styling and accordion behavio
     ['[data-dark-mode] .hal-publications .hal-retry.btn', 'color', '#8ed6fb'],
     ['[data-dark-mode] .hal-publications', '--hal-author', '#8ed6fb'],
     ['.hal-publications .hal-neural-signals path', 'stroke-dasharray', '12 88'],
+=======
+>>>>>>> f1c4bd721bfb9544d6f8cc4979055ca026ec8dd1
   ];
   for (const [selector, property, value] of required) {
     const rule = rules.get(selector);
     assert.ok(rule, `Production CSS must retain ${selector}`);
+<<<<<<< HEAD
     assert.ok(rule.some(candidate => candidate.nodes.some(node => node.prop === property && node.value === value)),
       `${selector} must retain ${property}: ${value}`);
   }
@@ -57,4 +69,9 @@ test('production CSS preserves runtime publication styling and accordion behavio
     });
   });
   assert.ok(reducedMotion, 'Reduced-motion preference must disable signal animation');
+=======
+    assert.ok(rule.nodes.some(node => node.prop === property && node.value === value),
+      `${selector} must retain ${property}: ${value}`);
+  }
+>>>>>>> f1c4bd721bfb9544d6f8cc4979055ca026ec8dd1
 });

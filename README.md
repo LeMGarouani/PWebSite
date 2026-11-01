@@ -8,7 +8,11 @@ Personal website using the Hugo [docks](https://getdoks.org/) theme.
 
 This website is generated using [hugo](https://gohugo.io/), a static website generation framework.
 
+<<<<<<< HEAD
 Use Node.js 22.12 or newer and install the locked dependencies (including Hugo Extended):
+=======
+Use Node.js 22 and install the locked dependencies (including Hugo Extended):
+>>>>>>> f1c4bd721bfb9544d6f8cc4979055ca026ec8dd1
 
 ```bash
 npm ci
@@ -69,6 +73,7 @@ The integration does not create article pages or import abstracts or PDFs.
 
 On Netlify, the function `hal-publications` uses the public HAL API without
 credentials. Successful responses are cached for up to 24 hours in the Netlify
+<<<<<<< HEAD
 CDN and in each warm function instance, and saved in the site-wide Netlify
 Blobs store `publications`, key `hal-744405-v1`. This is a regular store, not a
 deploy-specific store, so the backup survives cold starts and deployments.
@@ -97,6 +102,13 @@ Until that happens, a HAL outage still returns an explicit 502; persistent
 storage cannot recover data that has never been saved. Check the function
 response for `persistenceAvailable: true` and the site's Blobs store after
 the first successful request. Netlify Blobs must be available on the site.
+=======
+CDN and in each warm function instance. A stale warm-instance copy is served
+with a warning if HAL fails. The browser also saves the last successful list
+in local storage, showing it with a warning on network errors.
+This is not a shared persistent server backup: a first-time visitor can receive
+an error during an outage if both the CDN and function caches are empty.
+>>>>>>> f1c4bd721bfb9544d6f8cc4979055ca026ec8dd1
 The Retry button appears on errors and does not bypass the 24-hour cache.
 Successful loads show only the title and grouped publications, without sync
 metadata or a refresh button.
@@ -112,6 +124,7 @@ Hugo instance on port 1314; port 8888 proxies it and executes the same function
 as Netlify. The existing Hugo instance on port 1313 is unaffected and cannot
 execute Netlify functions. If Node reports a local certificate trust error on macOS,
 use `NODE_OPTIONS=--use-system-ca npm run preview:publications`.
+<<<<<<< HEAD
 This lightweight local server explicitly disables Blobs persistence and tests
 live HAL retrieval only. Cold-start backup and storage failure behavior is
 covered using an injected store in the unit tests; real storage integration
@@ -123,6 +136,8 @@ request itself.
 
 The project-local `.npmrc` selects the public npm registry for this repository
 only. Global npm configuration and other projects are not changed.
+=======
+>>>>>>> f1c4bd721bfb9544d6f8cc4979055ca026ec8dd1
 
 HAL search is paginated, keeping the latest version per HAL identifier and
 deduplicating identical DOIs (case insensitive). Dates use `producedDate_s`,
@@ -143,9 +158,12 @@ stacked caches do not extend freshness beyond 24 hours.
 Run `npm run test:unit` for HAL normalization, chronological ordering,
 pagination and cache expiry tests. `npm test` runs these tests before the
 existing lint suite.
+<<<<<<< HEAD
 The suite also exercises the installed Blobs SDK with mocked HTTP responses:
 Lambda context compatibility, cold-instance restoration, retry budgets and
 read/write timeouts. It does not access the real Netlify storage service.
+=======
+>>>>>>> f1c4bd721bfb9544d6f8cc4979055ca026ec8dd1
 
 Run `npm run test:production` to build the site and verify that the optimized
 CSS retains runtime author colors, badge alignment and accordion behavior.

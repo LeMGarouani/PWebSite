@@ -132,6 +132,7 @@ body {
   --hal-text: #263238;
   --hal-author: #633093;
 
+<<<<<<< HEAD
   .hal-notice {
     margin: 1.5rem 0;
   }
@@ -293,6 +294,8 @@ body {
     fill: var(--hal-text);
   }
 
+=======
+>>>>>>> f1c4bd721bfb9544d6f8cc4979055ca026ec8dd1
   .accordion-button {
     display: flex;
     width: 100%;
@@ -301,8 +304,11 @@ body {
   }
 
   .accordion-button .badge {
+<<<<<<< HEAD
     background-color: var(--hal-author);
     color: #fff;
+=======
+>>>>>>> f1c4bd721bfb9544d6f8cc4979055ca026ec8dd1
     flex-shrink: 0;
     min-width: 2.5em;
     margin-left: auto;
@@ -344,6 +350,7 @@ body {
 
 [data-dark-mode] .hal-publications {
   --hal-text: #dee2e6;
+<<<<<<< HEAD
   --hal-author: #{$blue-300};
 
   .accordion-button .badge {
@@ -422,4 +429,7 @@ body {
   .hal-publications .hal-neural-halo {
     opacity: 0.12;
   }
+=======
+  --hal-author: #d6b4fc;
+>>>>>>> f1c4bd721bfb9544d6f8cc4979055ca026ec8dd1
 }

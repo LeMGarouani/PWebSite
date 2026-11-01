@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 const { connectLambda, getStore } = require('@netlify/blobs');
 const HAL_ID = '744405';
 const MAX_AGE = 86400000;
 const SNAPSHOT_KEY = `hal-${HAL_ID}-v1`;
+=======
+const HAL_ID = '744405';
+const MAX_AGE = 86400000;
+>>>>>>> f1c4bd721bfb9544d6f8cc4979055ca026ec8dd1
 const TYPES = {
   ART: 'journal-article',
   COMM: 'conference-paper',
@@ -17,6 +22,7 @@ const TYPES = {
 };
 let cached;
 
+<<<<<<< HEAD
 async function withStore(operation) {
   const controller = new AbortController();
   let timer;
@@ -57,6 +63,8 @@ function validateSnapshot(snapshot) {
   return snapshot;
 }
 
+=======
+>>>>>>> f1c4bd721bfb9544d6f8cc4979055ca026ec8dd1
 function normalizeWorks(docs) {
   const latest = new Map();
   for (const doc of docs) {
@@ -103,6 +111,7 @@ exports.handler = async (event) => {
   if (event.httpMethod !== 'GET') {
     return { statusCode: 405, headers: { Allow: 'GET' }, body: 'Method not allowed' };
   }
+<<<<<<< HEAD
   let storageReady = false;
   let persistenceAvailable = !cached || cached.persistenceAvailable !== false;
   if (!event.localPreview) {
@@ -118,11 +127,17 @@ exports.handler = async (event) => {
       console.error('HAL persistent snapshot read failed:', error);
     }
   }
+=======
+>>>>>>> f1c4bd721bfb9544d6f8cc4979055ca026ec8dd1
   let stale = false;
   try {
     if (!cached || Date.now() - cached.timestamp >= MAX_AGE) {
       const docs = [];
+<<<<<<< HEAD
       const signal = AbortSignal.timeout(8000);
+=======
+      const signal = AbortSignal.timeout(10000);
+>>>>>>> f1c4bd721bfb9544d6f8cc4979055ca026ec8dd1
       let total;
       do {
         const url = new URL('https://api.archives-ouvertes.fr/search/');
@@ -143,7 +158,11 @@ exports.handler = async (event) => {
         total = result.numFound;
         docs.push(...result.docs);
       } while (docs.length < total);
+<<<<<<< HEAD
       cached = { timestamp: Date.now(), works: normalizeWorks(docs), persistenceAvailable: false };
+=======
+      cached = { timestamp: Date.now(), works: normalizeWorks(docs) };
+>>>>>>> f1c4bd721bfb9544d6f8cc4979055ca026ec8dd1
     }
   } catch (error) {
     console.error('HAL publications retrieval failed:', error);
@@ -156,6 +175,7 @@ exports.handler = async (event) => {
     }
     stale = true;
   }
+<<<<<<< HEAD
   if (storageReady && cached.persistenceAvailable === false) {
     try {
       const snapshot = cached;
@@ -170,18 +190,28 @@ exports.handler = async (event) => {
     }
     if (event.localPreview) persistenceAvailable = true;
   }
+=======
+>>>>>>> f1c4bd721bfb9544d6f8cc4979055ca026ec8dd1
   const remainingSeconds = Math.max(0, Math.floor((MAX_AGE - (Date.now() - cached.timestamp)) / 1000));
   return {
     statusCode: 200,
     headers: {
       'Content-Type': 'application/json', 'Cache-Control': 'no-cache',
+<<<<<<< HEAD
       'Netlify-CDN-Cache-Control': stale || !persistenceAvailable || remainingSeconds === 0
+=======
+      'Netlify-CDN-Cache-Control': stale || remainingSeconds === 0
+>>>>>>> f1c4bd721bfb9544d6f8cc4979055ca026ec8dd1
         ? 'no-store'
         : `public, s-maxage=${remainingSeconds}`,
     },
     body: JSON.stringify({
+<<<<<<< HEAD
       hal: HAL_ID, updatedAt: new Date(cached.timestamp).toISOString(), stale,
       persistenceAvailable, works: cached.works,
+=======
+      hal: HAL_ID, updatedAt: new Date(cached.timestamp).toISOString(), stale, works: cached.works,
+>>>>>>> f1c4bd721bfb9544d6f8cc4979055ca026ec8dd1
     }),
   };
 };

@@ -31,7 +31,11 @@
     "lint:markdown-fix": "markdownlint-cli2-fix \"*.md\" \"content/**/*.md\"",
     "server": "exec-bin node_modules/.bin/hugo/hugo server",
     "test": "npm run test:unit && npm run -s lint",
+<<<<<<< HEAD
     "test:unit": "node --test scripts/hal-publications.test.js scripts/publications-loader.test.js scripts/publications-storage.test.js",
+=======
+    "test:unit": "node --test scripts/hal-publications.test.js",
+>>>>>>> f1c4bd721bfb9544d6f8cc4979055ca026ec8dd1
     "test:production": "npm run build && node --test scripts/publications-production.test.js",
     "env": "env",
     "precheck": "npm version",

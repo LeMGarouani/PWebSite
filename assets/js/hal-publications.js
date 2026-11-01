@@ -15,7 +15,10 @@ if (publicationsRoot) {
   const status = publicationsRoot.querySelector('[data-hal-status]');
   const list = publicationsRoot.querySelector('[data-hal-list]');
   const retry = publicationsRoot.querySelector('[data-hal-retry]');
+<<<<<<< HEAD
   const notice = publicationsRoot.querySelector('[data-hal-notice]');
+=======
+>>>>>>> f1c4bd721bfb9544d6f8cc4979055ca026ec8dd1
   const source = 'HAL';
   const profile = '744405';
   const endpoint = '/.netlify/functions/hal-publications';
@@ -82,7 +85,11 @@ if (publicationsRoot) {
       const label = document.createElement('b');
       label.textContent = category.label;
       const badge = document.createElement('span');
+<<<<<<< HEAD
       badge.className = 'badge rounded-pill ms-auto me-3';
+=======
+      badge.className = 'badge rounded-pill bg-info ms-auto me-3';
+>>>>>>> f1c4bd721bfb9544d6f8cc4979055ca026ec8dd1
       badge.textContent = String(works.length);
       const accessibleLabel = document.createElement('span');
       accessibleLabel.className = 'visually-hidden';
@@ -162,6 +169,7 @@ if (publicationsRoot) {
       }
       containers.get(category.id).append(card);
     });
+<<<<<<< HEAD
     status.hidden = !stale && data.persistenceAvailable !== false && data.works.length > 0;
     notice.hidden = status.hidden;
     notice.classList.toggle('hal-notice-saved', Boolean(stale));
@@ -182,10 +190,18 @@ if (publicationsRoot) {
         ? 'Publications loaded, but the server backup is unavailable. Please contact the site owner.'
         : `No public publications found on this ${source} profile.`;
     }
+=======
+    status.hidden = !stale && data.works.length > 0;
+    retry.hidden = !stale;
+    status.textContent = stale
+      ? `${source} unavailable. Showing a saved copy retrieved ${new Date(data.updatedAt).toLocaleString()}.`
+      : `No public publications found on this ${source} profile.`;
+>>>>>>> f1c4bd721bfb9544d6f8cc4979055ca026ec8dd1
   };
 
   const load = async () => {
     retry.disabled = true;
+<<<<<<< HEAD
     retry.hidden = true;
     notice.hidden = true;
     notice.classList.remove('hal-notice-saved');
@@ -204,13 +220,20 @@ if (publicationsRoot) {
         if (remaining > 0) await new Promise(resolve => setTimeout(resolve, remaining));
       }
     };
+=======
+    status.hidden = false;
+    status.textContent = `Loading publications from ${source}...`;
+>>>>>>> f1c4bd721bfb9544d6f8cc4979055ca026ec8dd1
     try {
       const response = await fetch(endpoint, {
         signal: AbortSignal.timeout(15000),
       });
       if (!response.ok) throw new Error(`Publications request failed: HTTP ${response.status}`);
       const data = validate(await response.json());
+<<<<<<< HEAD
       await finishLoading();
+=======
+>>>>>>> f1c4bd721bfb9544d6f8cc4979055ca026ec8dd1
       render(data, data.stale);
       try {
         localStorage.setItem(cacheKey, JSON.stringify(data));
@@ -218,9 +241,13 @@ if (publicationsRoot) {
         console.warn('Unable to save the publications offline copy:', error);
       }
     } catch (error) {
+<<<<<<< HEAD
       await finishLoading();
       console.error(`Unable to load ${source} publications:`, error);
       notice.hidden = false;
+=======
+      console.error(`Unable to load ${source} publications:`, error);
+>>>>>>> f1c4bd721bfb9544d6f8cc4979055ca026ec8dd1
       status.hidden = false;
       retry.hidden = false;
       status.textContent = 'Unable to load publications. Please retry.';
@@ -231,8 +258,11 @@ if (publicationsRoot) {
         console.warn('Unable to read the publications offline copy:', cacheError);
       }
     } finally {
+<<<<<<< HEAD
       clearTimeout(loadingTimer);
       status.classList.remove('hal-loading');
+=======
+>>>>>>> f1c4bd721bfb9544d6f8cc4979055ca026ec8dd1
       retry.disabled = false;
     }
   };

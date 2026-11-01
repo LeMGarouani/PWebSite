@@ -4,6 +4,7 @@
     <article>
       <h1 class="text-center">{{ .Title }}</h1>
       <div data-hal-publications class="hal-publications">
+<<<<<<< HEAD
         <div data-hal-notice class="hal-notice" hidden>
           <div data-hal-status class="hal-loading" role="status" aria-live="polite">Loading publications from HAL.sciences</div>
           <button data-hal-retry class="btn btn-outline-primary btn-sm hal-retry" type="button" hidden>
@@ -47,6 +48,11 @@
           </svg>
           <span>Loading publications from HAL.sciences</span>
         </template>
+=======
+        <p data-hal-status role="status" aria-live="polite">Loading publications...</p>
+        <button data-hal-retry class="btn btn-outline-primary mb-3" type="button" hidden>Retry</button>
+        <div data-hal-list></div>
+>>>>>>> f1c4bd721bfb9544d6f8cc4979055ca026ec8dd1
       </div>
       <noscript>Enable JavaScript to load publications, or visit <a href="https://hal.science/search/index/?q=authIdHal_i:744405">HAL</a>.</noscript>
     </article>

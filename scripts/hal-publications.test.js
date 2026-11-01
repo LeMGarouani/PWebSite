@@ -4,9 +4,12 @@ const fs = require('node:fs');
 const vm = require('node:vm');
 const { normalizeWorks } = require('../functions/hal-publications');
 const source = fs.readFileSync(require.resolve('../functions/hal-publications'), 'utf8');
+<<<<<<< HEAD
 const loadHandler = context => vm.runInNewContext(source, {
   ...context, AbortController, setTimeout, clearTimeout,
 });
+=======
+>>>>>>> f1c4bd721bfb9544d6f8cc4979055ca026ec8dd1
 const doc = (id, version = 1, doi = '') => ({
   halId_s: id, version_i: version, title_s: [`Title ${version}`],
   producedDate_s: '2025-05-20', authFullName_s: ['Moncef Garouani'],
@@ -64,9 +67,12 @@ test('paginates, caches and serves explicit stale data; cold failures return 502
   let time = Date.now();
   let calls = 0;
   const context = {
+<<<<<<< HEAD
     require: () => ({ connectLambda() {}, getStore: () => ({
       get: async () => null, setJSON: async () => {},
     }) }),
+=======
+>>>>>>> f1c4bd721bfb9544d6f8cc4979055ca026ec8dd1
     exports: {}, URL, URLSearchParams, AbortSignal,
     Date: class extends Date { static now() { return time; } },
     console: { error() {} },
@@ -79,7 +85,11 @@ test('paginates, caches and serves explicit stale data; cold failures return 502
       }) };
     },
   };
+<<<<<<< HEAD
   loadHandler(context);
+=======
+  vm.runInNewContext(source, context);
+>>>>>>> f1c4bd721bfb9544d6f8cc4979055ca026ec8dd1
   const handler = context.exports.handler;
   assert.equal((await handler({ httpMethod: 'POST' })).statusCode, 405);
   const initial = await handler({ httpMethod: 'GET' });
@@ -99,6 +109,7 @@ test('paginates, caches and serves explicit stale data; cold failures return 502
   assert.equal(JSON.parse(stale.body).stale, true);
   assert.equal(stale.headers['Netlify-CDN-Cache-Control'], 'no-store');
   const cold = { ...context, exports: {} };
+<<<<<<< HEAD
   loadHandler(cold);
   assert.equal((await cold.exports.handler({ httpMethod: 'GET' })).statusCode, 502);
 });
@@ -272,3 +283,8 @@ test('failed writes remain unavailable on warm requests until a write succeeds',
   assert.equal(JSON.parse(recovered.body).persistenceAvailable, true);
   assert.equal(writes, 3);
 });
+=======
+  vm.runInNewContext(source, cold);
+  assert.equal((await cold.exports.handler({ httpMethod: 'GET' })).statusCode, 502);
+});
+>>>>>>> f1c4bd721bfb9544d6f8cc4979055ca026ec8dd1
